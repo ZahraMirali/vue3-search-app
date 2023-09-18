@@ -1,112 +1,124 @@
 <template>
-    <SearchResults v-if="categoryExists" :results="searchResults" />
-    <CategoryErrorComponent v-else />
+    <LoadingSpinner v-if="loading" />
+    <ErrorAlert v-else-if="error" :message="error" />
+    <div v-else class="search-results">
+        <div v-for="(result, type) in searchResults" :key="type" class="search-result-box">
+            <h2 class="result-type">{{ type }}</h2>
+            <ul class="result-list">
+                <li v-for="item in result.data" :key="item.id" class="result-item">
+                    <component :is="getCardComponent(type)" :result="item" />
+                </li>
+            </ul>
+            <router-link v-if="result.data.length < result.totalCount" :to="`/${type}${generateSearchRoute}`"
+                class="see-all-link">
+                See all {{ type }} results
+            </router-link>
+        </div>
+    </div>
 </template>
   
 <script>
-import SearchResults from "../components/SearchResults.vue";
-import peopleData from "../data/people.json";
-import companiesData from "../data/companies.json";
-import productsData from "../data/products.json";
-import locationsData from "../data/locations.json";
-import CategoryErrorComponent from '../components/CategoryErrorComponent.vue';
+import PersonCard from "../components/PersonCard.vue";
+import CompanyCard from "../components/CompanyCard.vue";
+import ProductCard from "../components/ProductCard.vue";
+import LocationCard from "../components/LocationCard.vue";
+import LoadingSpinner from '../components/LoadingSpinner.vue';
+import ErrorAlert from '../components/ErrorAlert.vue';
+import searchCategory from "../services/search";
 
 export default {
+    props: { searchTerm: String },
     components: {
-        SearchResults,
-        CategoryErrorComponent
+        PersonCard,
+        CompanyCard,
+        ProductCard,
+        LocationCard,
+        LoadingSpinner,
+        ErrorAlert
     },
     data() {
         return {
+            loading: true,
+            error: null,
             searchResults: {},
-            categoryExists: false,
-            categories: ["people", "companies", "products", "locations"]
         };
     },
+    computed: {
+        generateSearchRoute() {
+            return `${this.searchTerm ? '/' + this.searchTerm : ''}`;
+        },
+    },
     created() {
-        console.log("CREATED")
-        this.selectedCategory = this.$route.params.type;
-        const categoryExists = this.categories.includes(this.selectedCategory);
-        this.categoryExists = categoryExists;
-        if (this.categoryExists) {
-            this.performSearch(this.selectedCategory, this.$route.params.searchTerm)
-        }
+        console.log("ALL CREATED", this.$route.params.type)
+        this.performSearch(this.$route.params.type, this.$route.params.searchTerm);
     },
     watch: {
         $route(to) {
-            console.log("WATCH")
             const routeParams = to.params;
-            this.selectedCategory = routeParams.type;
-            const categoryExists = this.categories.includes(this.selectedCategory);
-            this.categoryExists = categoryExists;
-            if (this.categoryExists) {
-                this.performSearch(this.selectedCategory, routeParams.searchTerm)
-            }
+            console.log("ALL WATCH", routeParams.type)
+            this.performSearch(routeParams.type, routeParams.searchTerm);
         },
     },
     methods: {
-        performSearch(selectedCategory, searchTerm = '') {
-            console.log("CATEGORY performSearch", selectedCategory);
-            let selectedData;
-
-            switch (selectedCategory) {
+        getCardComponent(type) {
+            switch (type) {
                 case "people":
-                    selectedData = peopleData;
-                    break;
+                    return "PersonCard";
                 case "companies":
-                    selectedData = companiesData;
-                    break;
+                    return "CompanyCard";
                 case "products":
-                    selectedData = productsData;
-                    break;
+                    return "ProductCard";
                 case "locations":
-                    selectedData = locationsData;
-                    break;
+                    return "LocationCard";
                 default:
-                    selectedData = [];
+                    return "div";
             }
-
-            this.searchResults = [...this.filterAndMapResults(selectedData, searchTerm, selectedCategory)];
-            console.log("CATEGORY results", this.searchResults)
-
         },
-        filterAndMapResults(data, searchTerm, type) {
-            return data
-                .filter((item) => this.itemMatchesSearch(item, searchTerm, type))
-                .map((item) => ({ ...item, type }));
+        performSearch(selectedCategory, searchTerm = '') {
+            searchCategory(selectedCategory, searchTerm)
+                .then((results) => {
+                    console.log("results", results)
+                    this.searchResults = results;
+                })
+                .catch((error) => {
+                    this.error = error;
+                })
+                .finally(() => {
+                    this.loading = false;
+                })
         },
-        itemMatchesSearch(item, searchTerm, type) {
-            if (type === "people") {
-                return (
-                    item.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    item.lastName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    item.bio.toLowerCase().includes(searchTerm.toLowerCase())
-                );
-            } else if (type === "companies") {
-                return (
-                    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    item.catchPhrase.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    item.buzzPhrase.toLowerCase().includes(searchTerm.toLowerCase())
-                );
-            } else if (type === "products") {
-                return (
-                    item.product.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    item.productDescription.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    item.productMaterial.toLowerCase().includes(searchTerm.toLowerCase())
-                );
-            } else if (type === "locations") {
-                return (
-                    item.county.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    item.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    item.street.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    item.zipCode.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    item.buildingNumber.toLowerCase().includes(searchTerm.toLowerCase())
-                );
-            }
-
-            return false;
-        },
-    },
+    }
 };
 </script>
+  
+
+<style scoped>
+.search-result-box {
+    border-radius: 0.8rem;
+    margin-bottom: 0.8rem;
+    background-color: #fff;
+    padding: 1.6rem 1.2rem 0.4rem 1.6rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-type {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.result-list {
+    list-style: none;
+    padding: 0;
+}
+
+.result-item {
+    border-bottom: 1px solid #d1d1d1;
+    padding: 1rem 0;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+</style>
   

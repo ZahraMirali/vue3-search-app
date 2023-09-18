@@ -1,14 +1,14 @@
+import peopleData from '../data/people.json'
+import companiesData from '../data/companies.json'
+import productsData from '../data/products.json'
+import locationsData from '../data/locations.json'
+
 const searchConfig = {
   people: ['firstName', 'lastName', 'bio'],
   companies: ['name', 'catchPhrase', 'buzzPhrase'],
   products: ['product', 'productDescription', 'productMaterial'],
   locations: ['county', 'city', 'street', 'zipCode', 'buildingNumber']
 }
-
-import peopleData from '../data/people.json'
-import companiesData from '../data/companies.json'
-import productsData from '../data/products.json'
-import locationsData from '../data/locations.json'
 
 const categoriesData = {
   people: peopleData,
@@ -17,7 +17,7 @@ const categoriesData = {
   locations: locationsData
 }
 
-function filterAndMapResults(data, searchTerm, categoryName) {
+function filterResults(data, searchTerm, categoryName) {
   const propertiesToSearch = searchConfig[categoryName] || []
 
   return data.filter((item) =>
@@ -34,7 +34,8 @@ function searchCategory(categoryName, searchTerm) {
 
       Promise.all(
         Object.keys(categoriesData).map(async (category) => {
-          allResults[category] = filterAndMapResults(categoriesData[category], searchTerm, category)
+          const data = filterResults(categoriesData[category], searchTerm, category)
+          allResults[category] = { data: data.slice(0, 3), totalCount: data.length }
         })
       )
         .then(() => {
@@ -49,7 +50,8 @@ function searchCategory(categoryName, searchTerm) {
       if (!categoryData) {
         reject(new Error(`Category not found: ${categoryName}`))
       } else {
-        const results = filterAndMapResults(categoryData, searchTerm, categoryName)
+        const data = filterResults(categoriesData[categoryName], searchTerm, categoryName)
+        const results = { [categoryName]: { data, totalCount: data.length } }
         resolve(results)
       }
     }
