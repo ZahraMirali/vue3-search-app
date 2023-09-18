@@ -6,7 +6,7 @@
                 <component :is="result.sexType === 'male' ? 'MaleIcon' : 'FemaleIcon'" />
             </div>
             <div class="title-container">
-                <router-link :to="`/${result.type}/${result.id}`">
+                <router-link :to="`/${result.type}/${result.slug}`">
                     <div class="title">{{ result.firstName }} {{ result.lastName }}</div>
                 </router-link>
                 <div class="job-title">{{ result.jobTitle }}</div>

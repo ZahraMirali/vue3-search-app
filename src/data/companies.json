@@ -1,502 +1,602 @@
 [
     {
-        "name": "Blick, Witting and Ryan",
-        "catchPhrase": "Open-architected coherent contingency",
-        "buzzPhrase": "monetize best-of-breed mindshare"
+      "name": "Blick, Witting and Ryan",
+      "catchPhrase": "Open-architected coherent contingency",
+      "buzzPhrase": "monetize best-of-breed mindshare",
+      "slug": "blick-witting-and-ryan"
     },
     {
-        "name": "Ziemann Group",
-        "catchPhrase": "Object-based fault-tolerant algorithm",
-        "buzzPhrase": "harness bricks-and-clicks action-items"
+      "name": "Ziemann Group",
+      "catchPhrase": "Object-based fault-tolerant algorithm",
+      "buzzPhrase": "harness bricks-and-clicks action-items",
+      "slug": "ziemann-group"
     },
     {
-        "name": "Kihn Inc",
-        "catchPhrase": "Ergonomic fault-tolerant ability",
-        "buzzPhrase": "deliver holistic deliverables"
+      "name": "Kihn Inc",
+      "catchPhrase": "Ergonomic fault-tolerant ability",
+      "buzzPhrase": "deliver holistic deliverables",
+      "slug": "kihn-inc"
     },
     {
-        "name": "Gutkowski - Turner",
-        "catchPhrase": "Fundamental fault-tolerant superstructure",
-        "buzzPhrase": "cultivate impactful action-items"
+      "name": "Gutkowski - Turner",
+      "catchPhrase": "Fundamental fault-tolerant superstructure",
+      "buzzPhrase": "cultivate impactful action-items",
+      "slug": "gutkowski-turner"
     },
     {
-        "name": "Reichert and Sons",
-        "catchPhrase": "Virtual client-driven hierarchy",
-        "buzzPhrase": "orchestrate cross-media architectures"
+      "name": "Reichert and Sons",
+      "catchPhrase": "Virtual client-driven hierarchy",
+      "buzzPhrase": "orchestrate cross-media architectures",
+      "slug": "reichert-and-sons"
     },
     {
-        "name": "Runolfsson - Purdy",
-        "catchPhrase": "Versatile intangible alliance",
-        "buzzPhrase": "redefine web-enabled convergence"
+      "name": "Runolfsson - Purdy",
+      "catchPhrase": "Versatile intangible alliance",
+      "buzzPhrase": "redefine web-enabled convergence",
+      "slug": "runolfsson-purdy"
     },
     {
-        "name": "Labadie, Stark and Jacobs",
-        "catchPhrase": "Adaptive intangible budgetary management",
-        "buzzPhrase": "orchestrate customized deliverables"
+      "name": "Labadie, Stark and Jacobs",
+      "catchPhrase": "Adaptive intangible budgetary management",
+      "buzzPhrase": "orchestrate customized deliverables",
+      "slug": "labadie-stark-and-jacobs"
     },
     {
-        "name": "Morar, Wunsch and Macejkovic",
-        "catchPhrase": "Multi-lateral hybrid superstructure",
-        "buzzPhrase": "implement e-business platforms"
+      "name": "Morar, Wunsch and Macejkovic",
+      "catchPhrase": "Multi-lateral hybrid superstructure",
+      "buzzPhrase": "implement e-business platforms",
+      "slug": "morar-wunsch-and-macejkovic"
     },
     {
-        "name": "Gulgowski LLC",
-        "catchPhrase": "Mandatory impactful portal",
-        "buzzPhrase": "whiteboard real-time deliverables"
+      "name": "Gulgowski LLC",
+      "catchPhrase": "Mandatory impactful portal",
+      "buzzPhrase": "whiteboard real-time deliverables",
+      "slug": "gulgowski-llc"
     },
     {
-        "name": "DuBuque LLC",
-        "catchPhrase": "Synchronised executive algorithm",
-        "buzzPhrase": "empower transparent solutions"
+      "name": "DuBuque LLC",
+      "catchPhrase": "Synchronised executive algorithm",
+      "buzzPhrase": "empower transparent solutions",
+      "slug": "dubuque-llc"
     },
     {
-        "name": "Hoppe, Sauer and Jacobs",
-        "catchPhrase": "Extended global Graphic Interface",
-        "buzzPhrase": "transition front-end e-business"
+      "name": "Hoppe, Sauer and Jacobs",
+      "catchPhrase": "Extended global Graphic Interface",
+      "buzzPhrase": "transition front-end e-business",
+      "slug": "hoppe-sauer-and-jacobs"
     },
     {
-        "name": "O'Keefe - Jacobi",
-        "catchPhrase": "Configurable value-added project",
-        "buzzPhrase": "transform enterprise blockchains"
+      "name": "O'Keefe - Jacobi",
+      "catchPhrase": "Configurable value-added project",
+      "buzzPhrase": "transform enterprise blockchains",
+      "slug": "o-keefe-jacobi"
     },
     {
-        "name": "Borer, Torphy and Waters",
-        "catchPhrase": "Decentralized heuristic collaboration",
-        "buzzPhrase": "orchestrate bleeding-edge solutions"
+      "name": "Borer, Torphy and Waters",
+      "catchPhrase": "Decentralized heuristic collaboration",
+      "buzzPhrase": "orchestrate bleeding-edge solutions",
+      "slug": "borer-torphy-and-waters"
     },
     {
-        "name": "Hammes, Kris and Bins",
-        "catchPhrase": "Face to face hybrid policy",
-        "buzzPhrase": "recontextualize rich models"
+      "name": "Hammes, Kris and Bins",
+      "catchPhrase": "Face to face hybrid policy",
+      "buzzPhrase": "recontextualize rich models",
+      "slug": "hammes-kris-and-bins"
     },
     {
-        "name": "Johnston - Gorczany",
-        "catchPhrase": "User-centric 3rd generation contingency",
-        "buzzPhrase": "streamline cross-platform channels"
+      "name": "Johnston - Gorczany",
+      "catchPhrase": "User-centric 3rd generation contingency",
+      "buzzPhrase": "streamline cross-platform channels",
+      "slug": "johnston-gorczany"
     },
     {
-        "name": "Rowe - Heathcote",
-        "catchPhrase": "Business-focused homogeneous internet solution",
-        "buzzPhrase": "envisioneer next-generation infrastructures"
+      "name": "Rowe - Heathcote",
+      "catchPhrase": "Business-focused homogeneous internet solution",
+      "buzzPhrase": "envisioneer next-generation infrastructures",
+      "slug": "rowe-heathcote"
     },
     {
-        "name": "Reilly - Hermiston",
-        "catchPhrase": "Function-based optimizing hardware",
-        "buzzPhrase": "iterate best-of-breed content"
+      "name": "Reilly - Hermiston",
+      "catchPhrase": "Function-based optimizing hardware",
+      "buzzPhrase": "iterate best-of-breed content",
+      "slug": "reilly-hermiston"
     },
     {
-        "name": "Shanahan Group",
-        "catchPhrase": "Cloned web-enabled hierarchy",
-        "buzzPhrase": "evolve dot-com supply-chains"
+      "name": "Shanahan Group",
+      "catchPhrase": "Cloned web-enabled hierarchy",
+      "buzzPhrase": "evolve dot-com supply-chains",
+      "slug": "shanahan-group"
     },
     {
-        "name": "Abshire, Hilpert and Reichel",
-        "catchPhrase": "Implemented user-facing hub",
-        "buzzPhrase": "utilize transparent action-items"
+      "name": "Abshire, Hilpert and Reichel",
+      "catchPhrase": "Implemented user-facing hub",
+      "buzzPhrase": "utilize transparent action-items",
+      "slug": "abshire-hilpert-and-reichel"
     },
     {
-        "name": "Johnston - Nitzsche",
-        "catchPhrase": "Stand-alone analyzing service-desk",
-        "buzzPhrase": "transition strategic supply-chains"
+      "name": "Johnston - Nitzsche",
+      "catchPhrase": "Stand-alone analyzing service-desk",
+      "buzzPhrase": "transition strategic supply-chains",
+      "slug": "johnston-nitzsche"
     },
     {
-        "name": "Conn, Hirthe and Batz",
-        "catchPhrase": "Digitized transitional secured line",
-        "buzzPhrase": "transition revolutionary convergence"
+      "name": "Conn, Hirthe and Batz",
+      "catchPhrase": "Digitized transitional secured line",
+      "buzzPhrase": "transition revolutionary convergence",
+      "slug": "conn-hirthe-and-batz"
     },
     {
-        "name": "Gleason and Sons",
-        "catchPhrase": "Configurable contextually-based software",
-        "buzzPhrase": "facilitate front-end mindshare"
+      "name": "Gleason and Sons",
+      "catchPhrase": "Configurable contextually-based software",
+      "buzzPhrase": "facilitate front-end mindshare",
+      "slug": "gleason-and-sons"
     },
     {
-        "name": "Haag - Reichel",
-        "catchPhrase": "Automated modular groupware",
-        "buzzPhrase": "extend efficient convergence"
+      "name": "Haag - Reichel",
+      "catchPhrase": "Automated modular groupware",
+      "buzzPhrase": "extend efficient convergence",
+      "slug": "haag-reichel"
     },
     {
-        "name": "Simonis - Bayer",
-        "catchPhrase": "Seamless static neural-net",
-        "buzzPhrase": "incubate synergistic content"
+      "name": "Simonis - Bayer",
+      "catchPhrase": "Seamless static neural-net",
+      "buzzPhrase": "incubate synergistic content",
+      "slug": "simonis-bayer"
     },
     {
-        "name": "Pfeffer and Sons",
-        "catchPhrase": "Streamlined tertiary model",
-        "buzzPhrase": "scale proactive users"
+      "name": "Pfeffer and Sons",
+      "catchPhrase": "Streamlined tertiary model",
+      "buzzPhrase": "scale proactive users",
+      "slug": "pfeffer-and-sons"
     },
     {
-        "name": "White, Tremblay and Robel",
-        "catchPhrase": "Synergized heuristic adapter",
-        "buzzPhrase": "mesh cutting-edge action-items"
+      "name": "White, Tremblay and Robel",
+      "catchPhrase": "Synergized heuristic adapter",
+      "buzzPhrase": "mesh cutting-edge action-items",
+      "slug": "white-tremblay-and-robel"
     },
     {
-        "name": "Corwin, Paucek and Brown",
-        "catchPhrase": "Assimilated zero defect analyzer",
-        "buzzPhrase": "utilize innovative ROI"
+      "name": "Corwin, Paucek and Brown",
+      "catchPhrase": "Assimilated zero defect analyzer",
+      "buzzPhrase": "utilize innovative ROI",
+      "slug": "corwin-paucek-and-brown"
     },
     {
-        "name": "Harris - Rolfson",
-        "catchPhrase": "Future-proofed next generation implementation",
-        "buzzPhrase": "whiteboard cutting-edge lifetime value"
+      "name": "Harris - Rolfson",
+      "catchPhrase": "Future-proofed next generation implementation",
+      "buzzPhrase": "whiteboard cutting-edge lifetime value",
+      "slug": "harris-rolfson"
     },
     {
-        "name": "Weissnat - Barton",
-        "catchPhrase": "User-friendly multimedia parallelism",
-        "buzzPhrase": "evolve vertical infrastructures"
+      "name": "Weissnat - Barton",
+      "catchPhrase": "User-friendly multimedia parallelism",
+      "buzzPhrase": "evolve vertical infrastructures",
+      "slug": "weissnat-barton"
     },
     {
-        "name": "Schaefer, Crist and Schamberger",
-        "catchPhrase": "Upgradable 4th generation portal",
-        "buzzPhrase": "maximize global experiences"
+      "name": "Schaefer, Crist and Schamberger",
+      "catchPhrase": "Upgradable 4th generation portal",
+      "buzzPhrase": "maximize global experiences",
+      "slug": "schaefer-crist-and-schamberger"
     },
     {
-        "name": "Hudson, Feil and Lueilwitz",
-        "catchPhrase": "Self-enabling logistical help-desk",
-        "buzzPhrase": "e-enable intuitive communities"
+      "name": "Hudson, Feil and Lueilwitz",
+      "catchPhrase": "Self-enabling logistical help-desk",
+      "buzzPhrase": "e-enable intuitive communities",
+      "slug": "hudson-feil-and-lueilwitz"
     },
     {
-        "name": "Heidenreich LLC",
-        "catchPhrase": "Monitored clear-thinking superstructure",
-        "buzzPhrase": "whiteboard turn-key ROI"
+      "name": "Heidenreich LLC",
+      "catchPhrase": "Monitored clear-thinking superstructure",
+      "buzzPhrase": "whiteboard turn-key ROI",
+      "slug": "heidenreich-llc"
     },
     {
-        "name": "Kessler - O'Kon",
-        "catchPhrase": "Progressive multi-tasking benchmark",
-        "buzzPhrase": "leverage intuitive supply-chains"
+      "name": "Kessler - O'Kon",
+      "catchPhrase": "Progressive multi-tasking benchmark",
+      "buzzPhrase": "leverage intuitive supply-chains",
+      "slug": "kessler-o-kon"
     },
     {
-        "name": "Little, Wunsch and Bins",
-        "catchPhrase": "Compatible high-level throughput",
-        "buzzPhrase": "synthesize dot-com ROI"
+      "name": "Little, Wunsch and Bins",
+      "catchPhrase": "Compatible high-level throughput",
+      "buzzPhrase": "synthesize dot-com ROI",
+      "slug": "little-wunsch-and-bins"
     },
     {
-        "name": "Kuhn, Walter and Barrows",
-        "catchPhrase": "Phased real-time moratorium",
-        "buzzPhrase": "deploy back-end channels"
+      "name": "Kuhn, Walter and Barrows",
+      "catchPhrase": "Phased real-time moratorium",
+      "buzzPhrase": "deploy back-end channels",
+      "slug": "kuhn-walter-and-barrows"
     },
     {
-        "name": "Daugherty Inc",
-        "catchPhrase": "Re-contextualized web-enabled budgetary management",
-        "buzzPhrase": "brand killer communities"
+      "name": "Daugherty Inc",
+      "catchPhrase": "Re-contextualized web-enabled budgetary management",
+      "buzzPhrase": "brand killer communities",
+      "slug": "daugherty-inc"
     },
     {
-        "name": "Cummerata LLC",
-        "catchPhrase": "Compatible mobile capability",
-        "buzzPhrase": "matrix interactive networks"
+      "name": "Cummerata LLC",
+      "catchPhrase": "Compatible mobile capability",
+      "buzzPhrase": "matrix interactive networks",
+      "slug": "cummerata-llc"
     },
     {
-        "name": "Lehner - Fritsch",
-        "catchPhrase": "Progressive bifurcated interface",
-        "buzzPhrase": "reinvent intuitive mindshare"
+      "name": "Lehner - Fritsch",
+      "catchPhrase": "Progressive bifurcated interface",
+      "buzzPhrase": "reinvent intuitive mindshare",
+      "slug": "lehner-fritsch"
     },
     {
-        "name": "Corwin and Sons",
-        "catchPhrase": "Diverse intangible projection",
-        "buzzPhrase": "disintermediate value-added ROI"
+      "name": "Corwin and Sons",
+      "catchPhrase": "Diverse intangible projection",
+      "buzzPhrase": "disintermediate value-added ROI",
+      "slug": "corwin-and-sons"
     },
     {
-        "name": "Mills Inc",
-        "catchPhrase": "Focused human-resource capacity",
-        "buzzPhrase": "optimize global communities"
+      "name": "Mills Inc",
+      "catchPhrase": "Focused human-resource capacity",
+      "buzzPhrase": "optimize global communities",
+      "slug": "mills-inc"
     },
     {
-        "name": "Dare - Beier",
-        "catchPhrase": "Secured interactive solution",
-        "buzzPhrase": "generate rich infrastructures"
+      "name": "Dare - Beier",
+      "catchPhrase": "Secured interactive solution",
+      "buzzPhrase": "generate rich infrastructures",
+      "slug": "dare-beier"
     },
     {
-        "name": "Rodriguez - Effertz",
-        "catchPhrase": "De-engineered global challenge",
-        "buzzPhrase": "strategize vertical models"
+      "name": "Rodriguez - Effertz",
+      "catchPhrase": "De-engineered global challenge",
+      "buzzPhrase": "strategize vertical models",
+      "slug": "rodriguez-effertz"
     },
     {
-        "name": "Johnson - Boyle",
-        "catchPhrase": "Programmable zero defect customer loyalty",
-        "buzzPhrase": "transition ubiquitous models"
+      "name": "Johnson - Boyle",
+      "catchPhrase": "Programmable zero defect customer loyalty",
+      "buzzPhrase": "transition ubiquitous models",
+      "slug": "johnson-boyle"
     },
     {
-        "name": "Veum, Macejkovic and Morar",
-        "catchPhrase": "Balanced zero administration benchmark",
-        "buzzPhrase": "empower web-enabled functionalities"
+      "name": "Veum, Macejkovic and Morar",
+      "catchPhrase": "Balanced zero administration benchmark",
+      "buzzPhrase": "empower web-enabled functionalities",
+      "slug": "veum-macejkovic-and-morar"
     },
     {
-        "name": "Gerhold Group",
-        "catchPhrase": "Cloned hybrid success",
-        "buzzPhrase": "synthesize sexy channels"
+      "name": "Gerhold Group",
+      "catchPhrase": "Cloned hybrid success",
+      "buzzPhrase": "synthesize sexy channels",
+      "slug": "gerhold-group"
     },
     {
-        "name": "Ritchie - Dickinson",
-        "catchPhrase": "Universal content-based product",
-        "buzzPhrase": "embrace turn-key synergies"
+      "name": "Ritchie - Dickinson",
+      "catchPhrase": "Universal content-based product",
+      "buzzPhrase": "embrace turn-key synergies",
+      "slug": "ritchie-dickinson"
     },
     {
-        "name": "Dietrich Group",
-        "catchPhrase": "Compatible bandwidth-monitored standardization",
-        "buzzPhrase": "orchestrate rich systems"
+      "name": "Dietrich Group",
+      "catchPhrase": "Compatible bandwidth-monitored standardization",
+      "buzzPhrase": "orchestrate rich systems",
+      "slug": "dietrich-group"
     },
     {
-        "name": "Glover Inc",
-        "catchPhrase": "Centralized coherent conglomeration",
-        "buzzPhrase": "unleash seamless blockchains"
+      "name": "Glover Inc",
+      "catchPhrase": "Centralized coherent conglomeration",
+      "buzzPhrase": "unleash seamless blockchains",
+      "slug": "glover-inc"
     },
     {
-        "name": "Will Inc",
-        "catchPhrase": "Open-architected interactive protocol",
-        "buzzPhrase": "orchestrate plug-and-play architectures"
+      "name": "Will Inc",
+      "catchPhrase": "Open-architected interactive protocol",
+      "buzzPhrase": "orchestrate plug-and-play architectures",
+      "slug": "will-inc"
     },
     {
-        "name": "Durgan Group",
-        "catchPhrase": "Profit-focused bifurcated structure",
-        "buzzPhrase": "embrace back-end solutions"
+      "name": "Durgan Group",
+      "catchPhrase": "Profit-focused bifurcated structure",
+      "buzzPhrase": "embrace back-end solutions",
+      "slug": "durgan-group"
     },
     {
-        "name": "Champlin LLC",
-        "catchPhrase": "Decentralized mobile framework",
-        "buzzPhrase": "target impactful synergies"
+      "name": "Champlin LLC",
+      "catchPhrase": "Decentralized mobile framework",
+      "buzzPhrase": "target impactful synergies",
+      "slug": "champlin-llc"
     },
     {
-        "name": "Bradtke - Lynch",
-        "catchPhrase": "Streamlined grid-enabled methodology",
-        "buzzPhrase": "transition out-of-the-box communities"
+      "name": "Bradtke - Lynch",
+      "catchPhrase": "Streamlined grid-enabled methodology",
+      "buzzPhrase": "transition out-of-the-box communities",
+      "slug": "bradtke-lynch"
     },
     {
-        "name": "Quitzon, Collins and Kirlin",
-        "catchPhrase": "Operative transitional utilisation",
-        "buzzPhrase": "repurpose web-enabled deliverables"
+      "name": "Quitzon, Collins and Kirlin",
+      "catchPhrase": "Operative transitional utilisation",
+      "buzzPhrase": "repurpose web-enabled deliverables",
+      "slug": "quitzon-collins-and-kirlin"
     },
     {
-        "name": "Armstrong - Wilkinson",
-        "catchPhrase": "Organized human-resource functionalities",
-        "buzzPhrase": "architect customized web services"
+      "name": "Armstrong - Wilkinson",
+      "catchPhrase": "Organized human-resource functionalities",
+      "buzzPhrase": "architect customized web services",
+      "slug": "armstrong-wilkinson"
     },
     {
-        "name": "Nolan and Sons",
-        "catchPhrase": "Integrated discrete Graphic Interface",
-        "buzzPhrase": "morph B2B web services"
+      "name": "Nolan and Sons",
+      "catchPhrase": "Integrated discrete Graphic Interface",
+      "buzzPhrase": "morph B2B web services",
+      "slug": "nolan-and-sons"
     },
     {
-        "name": "Graham - McClure",
-        "catchPhrase": "Progressive 4th generation pricing structure",
-        "buzzPhrase": "reinvent magnetic technologies"
+      "name": "Graham - McClure",
+      "catchPhrase": "Progressive 4th generation pricing structure",
+      "buzzPhrase": "reinvent magnetic technologies",
+      "slug": "graham-mcclure"
     },
     {
-        "name": "Bruen, Altenwerth and Harris",
-        "catchPhrase": "Centralized attitude-oriented pricing structure",
-        "buzzPhrase": "extend seamless content"
+      "name": "Bruen, Altenwerth and Harris",
+      "catchPhrase": "Centralized attitude-oriented pricing structure",
+      "buzzPhrase": "extend seamless content",
+      "slug": "bruen-altenwerth-and-harris"
     },
     {
-        "name": "Windler - Mante",
-        "catchPhrase": "Organized system-worthy knowledge user",
-        "buzzPhrase": "mesh sexy infrastructures"
+      "name": "Windler - Mante",
+      "catchPhrase": "Organized system-worthy knowledge user",
+      "buzzPhrase": "mesh sexy infrastructures",
+      "slug": "windler-mante"
     },
     {
-        "name": "Upton Inc",
-        "catchPhrase": "Centralized explicit database",
-        "buzzPhrase": "incubate wireless paradigms"
+      "name": "Upton Inc",
+      "catchPhrase": "Centralized explicit database",
+      "buzzPhrase": "incubate wireless paradigms",
+      "slug": "upton-inc"
     },
     {
-        "name": "Jenkins Group",
-        "catchPhrase": "Right-sized cohesive secured line",
-        "buzzPhrase": "reinvent magnetic blockchains"
+      "name": "Jenkins Group",
+      "catchPhrase": "Right-sized cohesive secured line",
+      "buzzPhrase": "reinvent magnetic blockchains",
+      "slug": "jenkins-group"
     },
     {
-        "name": "Kuhn, Kohler and Stamm",
-        "catchPhrase": "Ameliorated 24/7 concept",
-        "buzzPhrase": "facilitate out-of-the-box applications"
+      "name": "Kuhn, Kohler and Stamm",
+      "catchPhrase": "Ameliorated 24/7 concept",
+      "buzzPhrase": "facilitate out-of-the-box applications",
+      "slug": "kuhn-kohler-and-stamm"
     },
     {
-        "name": "Zulauf - Rempel",
-        "catchPhrase": "Inverse clear-thinking Graphical User Interface",
-        "buzzPhrase": "incubate dynamic mindshare"
+      "name": "Zulauf - Rempel",
+      "catchPhrase": "Inverse clear-thinking Graphical User Interface",
+      "buzzPhrase": "incubate dynamic mindshare",
+      "slug": "zulauf-rempel"
     },
     {
-        "name": "Murphy - Pacocha",
-        "catchPhrase": "Synchronised encompassing collaboration",
-        "buzzPhrase": "drive best-of-breed e-commerce"
+      "name": "Murphy - Pacocha",
+      "catchPhrase": "Synchronised encompassing collaboration",
+      "buzzPhrase": "drive best-of-breed e-commerce",
+      "slug": "murphy-pacocha"
     },
     {
-        "name": "Prohaska, Rodriguez and Dare",
-        "catchPhrase": "Open-architected object-oriented instruction set",
-        "buzzPhrase": "recontextualize dynamic blockchains"
+      "name": "Prohaska, Rodriguez and Dare",
+      "catchPhrase": "Open-architected object-oriented instruction set",
+      "buzzPhrase": "recontextualize dynamic blockchains",
+      "slug": "prohaska-rodriguez-and-dare"
     },
     {
-        "name": "King - Corkery",
-        "catchPhrase": "Assimilated leading edge application",
-        "buzzPhrase": "incentivize customized partnerships"
+      "name": "King - Corkery",
+      "catchPhrase": "Assimilated leading edge application",
+      "buzzPhrase": "incentivize customized partnerships",
+      "slug": "king-corkery"
     },
     {
-        "name": "Ernser and Sons",
-        "catchPhrase": "Fundamental responsive structure",
-        "buzzPhrase": "incubate killer paradigms"
+      "name": "Ernser and Sons",
+      "catchPhrase": "Fundamental responsive structure",
+      "buzzPhrase": "incubate killer paradigms",
+      "slug": "ernser-and-sons"
     },
     {
-        "name": "Schulist, Crooks and Ankunding",
-        "catchPhrase": "Focused contextually-based knowledge user",
-        "buzzPhrase": "mesh 24/7 metrics"
+      "name": "Schulist, Crooks and Ankunding",
+      "catchPhrase": "Focused contextually-based knowledge user",
+      "buzzPhrase": "mesh 24/7 metrics",
+      "slug": "schulist-crooks-and-ankunding"
     },
     {
-        "name": "Auer Inc",
-        "catchPhrase": "Distributed analyzing throughput",
-        "buzzPhrase": "deliver plug-and-play synergies"
+      "name": "Auer Inc",
+      "catchPhrase": "Distributed analyzing throughput",
+      "buzzPhrase": "deliver plug-and-play synergies",
+      "slug": "auer-inc"
     },
     {
-        "name": "Dickinson Inc",
-        "catchPhrase": "Secured modular local area network",
-        "buzzPhrase": "embrace B2B eyeballs"
+      "name": "Dickinson Inc",
+      "catchPhrase": "Secured modular local area network",
+      "buzzPhrase": "embrace B2B eyeballs",
+      "slug": "dickinson-inc"
     },
     {
-        "name": "Schimmel - Kautzer",
-        "catchPhrase": "Persevering clear-thinking throughput",
-        "buzzPhrase": "aggregate B2C users"
+      "name": "Schimmel - Kautzer",
+      "catchPhrase": "Persevering clear-thinking throughput",
+      "buzzPhrase": "aggregate B2C users",
+      "slug": "schimmel-kautzer"
     },
     {
-        "name": "Boyer Inc",
-        "catchPhrase": "Intuitive reciprocal structure",
-        "buzzPhrase": "generate web-enabled e-business"
+      "name": "Boyer Inc",
+      "catchPhrase": "Intuitive reciprocal structure",
+      "buzzPhrase": "generate web-enabled e-business",
+      "slug": "boyer-inc"
     },
     {
-        "name": "Becker LLC",
-        "catchPhrase": "Multi-layered directional solution",
-        "buzzPhrase": "syndicate seamless relationships"
+      "name": "Becker LLC",
+      "catchPhrase": "Multi-layered directional solution",
+      "buzzPhrase": "syndicate seamless relationships",
+      "slug": "becker-llc"
     },
     {
-        "name": "Goldner, Krajcik and Hayes",
-        "catchPhrase": "Triple-buffered exuding Graphic Interface",
-        "buzzPhrase": "evolve robust functionalities"
+      "name": "Goldner, Krajcik and Hayes",
+      "catchPhrase": "Triple-buffered exuding Graphic Interface",
+      "buzzPhrase": "evolve robust functionalities",
+      "slug": "goldner-krajcik-and-hayes"
     },
     {
-        "name": "Cronin, Crooks and Rath",
-        "catchPhrase": "Enterprise-wide attitude-oriented flexibility",
-        "buzzPhrase": "benchmark efficient eyeballs"
+      "name": "Cronin, Crooks and Rath",
+      "catchPhrase": "Enterprise-wide attitude-oriented flexibility",
+      "buzzPhrase": "benchmark efficient eyeballs",
+      "slug": "cronin-crooks-and-rath"
     },
     {
-        "name": "Renner, Hermiston and Yundt",
-        "catchPhrase": "Grass-roots national product",
-        "buzzPhrase": "empower cross-media mindshare"
+      "name": "Renner, Hermiston and Yundt",
+      "catchPhrase": "Grass-roots national product",
+      "buzzPhrase": "empower cross-media mindshare",
+      "slug": "renner-hermiston-and-yundt"
     },
     {
-        "name": "Sanford - Carroll",
-        "catchPhrase": "Reverse-engineered bifurcated internet solution",
-        "buzzPhrase": "optimize cross-media blockchains"
+      "name": "Sanford - Carroll",
+      "catchPhrase": "Reverse-engineered bifurcated internet solution",
+      "buzzPhrase": "optimize cross-media blockchains",
+      "slug": "sanford-carroll"
     },
     {
-        "name": "Kreiger - Champlin",
-        "catchPhrase": "Networked intermediate matrices",
-        "buzzPhrase": "optimize collaborative architectures"
+      "name": "Kreiger - Champlin",
+      "catchPhrase": "Networked intermediate matrices",
+      "buzzPhrase": "optimize collaborative architectures",
+      "slug": "kreiger-champlin"
     },
     {
-        "name": "Stracke, Gutkowski and Goodwin",
-        "catchPhrase": "Upgradable needs-based hub",
-        "buzzPhrase": "leverage 24/7 infrastructures"
+      "name": "Stracke, Gutkowski and Goodwin",
+      "catchPhrase": "Upgradable needs-based hub",
+      "buzzPhrase": "leverage 24/7 infrastructures",
+      "slug": "stracke-gutkowski-and-goodwin"
     },
     {
-        "name": "Deckow Group",
-        "catchPhrase": "Organized human-resource algorithm",
-        "buzzPhrase": "visualize cutting-edge schemas"
+      "name": "Deckow Group",
+      "catchPhrase": "Organized human-resource algorithm",
+      "buzzPhrase": "visualize cutting-edge schemas",
+      "slug": "deckow-group"
     },
     {
-        "name": "Becker - Yundt",
-        "catchPhrase": "User-friendly bi-directional flexibility",
-        "buzzPhrase": "enhance efficient e-commerce"
+      "name": "Becker - Yundt",
+      "catchPhrase": "User-friendly bi-directional flexibility",
+      "buzzPhrase": "enhance efficient e-commerce",
+      "slug": "becker-yundt"
     },
     {
-        "name": "Durgan - Sauer",
-        "catchPhrase": "Streamlined 4th generation installation",
-        "buzzPhrase": "optimize wireless platforms"
+      "name": "Durgan - Sauer",
+      "catchPhrase": "Streamlined 4th generation installation",
+      "buzzPhrase": "optimize wireless platforms",
+      "slug": "durgan-sauer"
     },
     {
-        "name": "Berge, Bogisich and Emmerich",
-        "catchPhrase": "Future-proofed empowering functionalities",
-        "buzzPhrase": "facilitate strategic ROI"
+      "name": "Berge, Bogisich and Emmerich",
+      "catchPhrase": "Future-proofed empowering functionalities",
+      "buzzPhrase": "facilitate strategic ROI",
+      "slug": "berge-bogisich-and-emmerich"
     },
     {
-        "name": "Harvey - Wiza",
-        "catchPhrase": "Operative impactful system engine",
-        "buzzPhrase": "revolutionize enterprise channels"
+      "name": "Harvey - Wiza",
+      "catchPhrase": "Operative impactful system engine",
+      "buzzPhrase": "revolutionize enterprise channels",
+      "slug": "harvey-wiza"
     },
     {
-        "name": "Muller - Donnelly",
-        "catchPhrase": "Function-based tangible monitoring",
-        "buzzPhrase": "integrate viral architectures"
+      "name": "Muller - Donnelly",
+      "catchPhrase": "Function-based tangible monitoring",
+      "buzzPhrase": "integrate viral architectures",
+      "slug": "muller-donnelly"
     },
     {
-        "name": "Williamson, Collier and McClure",
-        "catchPhrase": "Digitized 24 hour toolset",
-        "buzzPhrase": "facilitate virtual web services"
+      "name": "Williamson, Collier and McClure",
+      "catchPhrase": "Digitized 24 hour toolset",
+      "buzzPhrase": "facilitate virtual web services",
+      "slug": "williamson-collier-and-mcclure"
     },
     {
-        "name": "Harvey Group",
-        "catchPhrase": "Pre-emptive context-sensitive extranet",
-        "buzzPhrase": "implement viral paradigms"
+      "name": "Harvey Group",
+      "catchPhrase": "Pre-emptive context-sensitive extranet",
+      "buzzPhrase": "implement viral paradigms",
+      "slug": "harvey-group"
     },
     {
-        "name": "Reinger Inc",
-        "catchPhrase": "Multi-tiered intangible portal",
-        "buzzPhrase": "maximize impactful portals"
+      "name": "Reinger Inc",
+      "catchPhrase": "Multi-tiered intangible portal",
+      "buzzPhrase": "maximize impactful portals",
+      "slug": "reinger-inc"
     },
     {
-        "name": "Schowalter LLC",
-        "catchPhrase": "Compatible dedicated synergy",
-        "buzzPhrase": "scale strategic users"
+      "name": "Schowalter LLC",
+      "catchPhrase": "Compatible dedicated synergy",
+      "buzzPhrase": "scale strategic users",
+      "slug": "schowalter-llc"
     },
     {
-        "name": "Crist and Sons",
-        "catchPhrase": "Persistent user-facing infrastructure",
-        "buzzPhrase": "unleash B2B functionalities"
+      "name": "Crist and Sons",
+      "catchPhrase": "Persistent user-facing infrastructure",
+      "buzzPhrase": "unleash B2B functionalities",
+      "slug": "crist-and-sons"
     },
     {
-        "name": "Olson LLC",
-        "catchPhrase": "Optional non-volatile access",
-        "buzzPhrase": "grow virtual functionalities"
+      "name": "Olson LLC",
+      "catchPhrase": "Optional non-volatile access",
+      "buzzPhrase": "grow virtual functionalities",
+      "slug": "olson-llc"
     },
     {
-        "name": "Kertzmann - McKenzie",
-        "catchPhrase": "Reverse-engineered executive customer loyalty",
-        "buzzPhrase": "utilize mission-critical interfaces"
+      "name": "Kertzmann - McKenzie",
+      "catchPhrase": "Reverse-engineered executive customer loyalty",
+      "buzzPhrase": "utilize mission-critical interfaces",
+      "slug": "kertzmann-mckenzie"
     },
     {
-        "name": "Rosenbaum - Price",
-        "catchPhrase": "Universal incremental portal",
-        "buzzPhrase": "optimize viral metrics"
+      "name": "Rosenbaum - Price",
+      "catchPhrase": "Universal incremental portal",
+      "buzzPhrase": "optimize viral metrics",
+      "slug": "rosenbaum-price"
     },
     {
-        "name": "Schiller - Bergnaum",
-        "catchPhrase": "Open-source dynamic knowledge base",
-        "buzzPhrase": "deliver value-added experiences"
+      "name": "Schiller - Bergnaum",
+      "catchPhrase": "Open-source dynamic knowledge base",
+      "buzzPhrase": "deliver value-added experiences",
+      "slug": "schiller-bergnaum"
     },
     {
-        "name": "Bauch - Steuber",
-        "catchPhrase": "Diverse neutral flexibility",
-        "buzzPhrase": "transform viral convergence"
+      "name": "Bauch - Steuber",
+      "catchPhrase": "Diverse neutral flexibility",
+      "buzzPhrase": "transform viral convergence",
+      "slug": "bauch-steuber"
     },
     {
-        "name": "Sanford - Wiza",
-        "catchPhrase": "Focused fault-tolerant customer loyalty",
-        "buzzPhrase": "disintermediate out-of-the-box convergence"
+      "name": "Sanford - Wiza",
+      "catchPhrase": "Focused fault-tolerant customer loyalty",
+      "buzzPhrase": "disintermediate out-of-the-box convergence",
+      "slug": "sanford-wiza"
     },
     {
-        "name": "Stehr and Sons",
-        "catchPhrase": "Universal bi-directional neural-net",
-        "buzzPhrase": "empower back-end mindshare"
+      "name": "Stehr and Sons",
+      "catchPhrase": "Universal bi-directional neural-net",
+      "buzzPhrase": "empower back-end mindshare",
+      "slug": "stehr-and-sons"
     },
     {
-        "name": "Cruickshank LLC",
-        "catchPhrase": "Future-proofed multimedia open system",
-        "buzzPhrase": "monetize real-time platforms"
+      "name": "Cruickshank LLC",
+      "catchPhrase": "Future-proofed multimedia open system",
+      "buzzPhrase": "monetize real-time platforms",
+      "slug": "cruickshank-llc"
     },
     {
-        "name": "Keeling, Mertz and Langosh",
-        "catchPhrase": "Cross-group coherent challenge",
-        "buzzPhrase": "grow customized schemas"
+      "name": "Keeling, Mertz and Langosh",
+      "catchPhrase": "Cross-group coherent challenge",
+      "buzzPhrase": "grow customized schemas",
+      "slug": "keeling-mertz-and-langosh"
     },
     {
-        "name": "Nikolaus, O'Hara and Schaefer",
-        "catchPhrase": "Secured asynchronous core",
-        "buzzPhrase": "deliver 24/365 experiences"
+      "name": "Nikolaus, O'Hara and Schaefer",
+      "catchPhrase": "Secured asynchronous core",
+      "buzzPhrase": "deliver 24/365 experiences",
+      "slug": "nikolaus-o-hara-and-schaefer"
     },
     {
-        "name": "Yundt Inc",
-        "catchPhrase": "Multi-layered maximized concept",
-        "buzzPhrase": "iterate global systems"
+      "name": "Yundt Inc",
+      "catchPhrase": "Multi-layered maximized concept",
+      "buzzPhrase": "iterate global systems",
+      "slug": "yundt-inc"
     }
-]
+  ]

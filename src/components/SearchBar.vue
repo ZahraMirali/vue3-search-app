@@ -28,7 +28,7 @@ export default {
     computed: {
         generateSearchRoute() {
             console.log('generateSearchRoute SEARCHbAR', this.selectedCategory, 'searchTerm', this.searchTerm)
-            return `/${this.selectedCategory}${this.searchTerm ? '/' + this.searchTerm : ''}`;
+            return `/${this.selectedCategory}${this.searchTerm ? '/?keywords=' + this.searchTerm : ''}`;
         },
     },
     watch: {
@@ -36,7 +36,7 @@ export default {
             console.log("==>to<==", to)
             const routeParams = to.params;
             this.selectedCategory = routeParams.type || 'all';
-            this.searchTerm = routeParams.searchTerm || '';
+            this.searchTerm = to.query.keywords || '';
         },
     },
 };

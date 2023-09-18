@@ -6,7 +6,7 @@ import locationsData from '../data/locations.json'
 const searchConfig = {
   people: ['firstName', 'lastName', 'bio'],
   companies: ['name', 'catchPhrase', 'buzzPhrase'],
-  products: ['product', 'productDescription', 'productMaterial'],
+  products: ['name', 'description', 'material'],
   locations: ['county', 'city', 'street', 'zipCode', 'buildingNumber']
 }
 

@@ -5,7 +5,7 @@
         <div v-for="(result, type) in searchResults" :key="type" class="search-result-box">
             <h2 class="result-type">{{ type }}</h2>
             <ul class="result-list">
-                <li v-for="item in result.data" :key="item.id" class="result-item">
+                <li v-for="item in result.data" :key="item.slug" class="result-item">
                     <component :is="getCardComponent(type)" :result="item" />
                 </li>
             </ul>
@@ -27,7 +27,7 @@ import ErrorAlert from '../components/ErrorAlert.vue';
 import searchCategory from "../services/search";
 
 export default {
-    props: { searchTerm: String },
+    props: { keywords: String },
     components: {
         PersonCard,
         CompanyCard,
@@ -45,18 +45,18 @@ export default {
     },
     computed: {
         generateSearchRoute() {
-            return `${this.searchTerm ? '/' + this.searchTerm : ''}`;
+            return `${this.keywords ? '/' + this.keywords : ''}`;
         },
     },
     created() {
-        console.log("ALL CREATED", this.$route.params.type)
-        this.performSearch(this.$route.params.type, this.$route.params.searchTerm);
+        console.log("ALL CREATED = ", this.$route.params.type, this.$route.query.keywords)
+        this.performSearch(this.$route.params.type, this.$route.query.keywords);
     },
     watch: {
         $route(to) {
             const routeParams = to.params;
-            console.log("ALL WATCH", routeParams.type)
-            this.performSearch(routeParams.type, routeParams.searchTerm);
+            console.log("ALL WATCH = ", routeParams.type, to.query.keywords)
+            this.performSearch(routeParams.type, to.query.keywords);
         },
     },
     methods: {
@@ -74,8 +74,8 @@ export default {
                     return "div";
             }
         },
-        performSearch(selectedCategory, searchTerm = '') {
-            searchCategory(selectedCategory, searchTerm)
+        performSearch(selectedCategory, keywords = '') {
+            searchCategory(selectedCategory, keywords)
                 .then((results) => {
                     console.log("results", results)
                     this.searchResults = results;
