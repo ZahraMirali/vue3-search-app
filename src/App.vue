@@ -10,13 +10,24 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { provide, ref } from 'vue';
 import SearchBar from "./components/SearchBar.vue";
+import { getAllCategories } from "./services/search";
 
-export default {
-  components: { SearchBar },
-  name: 'App',
-};
+const categories = ref([]);
+const loading = ref(true);
+
+async function loadCategories() {
+  const results = await getAllCategories();
+
+  categories.value = results;
+  loading.value = false;
+}
+
+loadCategories();
+
+provide('categories', categories)
 </script>
 
 <style>

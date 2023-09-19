@@ -8,52 +8,25 @@
     </div>
 </template>
   
-<script>
+<script setup>
+import { inject, ref } from 'vue';
+import { useRouter } from 'vue-router';
 import CustomSelect from "./CustomSelect.vue";
-import { getAllCategories } from "../services/search";
 
-export default {
-    components: {
-        CustomSelect,
-    },
-    data() {
-        return {
-            searchTerm: "",
-            selectedCategory: "all",
-            categories: [],
-            loading: true
-        };
-    },
-    created() {
-        this.loadCategories()
-    },
-    methods: {
-        onInput(event) {
-            this.selectedCategory = event;
-            this.submitSearchForm();
-        },
-        loadCategories() {
-            getAllCategories()
-                .then((results) => {
-                    console.log("categories:", results)
-                    this.categories = results;
-                    this.loading = false;
-                });
-        },
-        submitSearchForm() {
-            const searchRoute = `/${this.selectedCategory}${this.searchTerm ? '/?keywords=' + this.searchTerm : ''}`
-            this.$router.push(searchRoute);
-        },
-    },
-    watch: {
-        $route(to) {
-            console.log("==>to<==", to)
-            const routeParams = to.params;
-            this.selectedCategory = routeParams.type || 'all';
-            this.searchTerm = to.query.keywords || '';
-        },
-    },
-};
+const categories = inject("categories");
+const selectedCategory = ref("all");
+const searchTerm = ref("");
+const router = useRouter();
+
+function onInput(event) {
+    selectedCategory.value = event;
+    submitSearchForm();
+}
+
+function submitSearchForm() {
+    const searchRoute = `/${selectedCategory.value}${searchTerm.value ? '/?keywords=' + searchTerm.value : ''}`
+    router.push(searchRoute);
+}
 </script>
   
 <style scoped>
@@ -66,4 +39,3 @@ export default {
     padding: 20px;
 }
 </style>
-  
