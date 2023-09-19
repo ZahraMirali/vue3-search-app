@@ -1,20 +1,10 @@
 <template>
-    <div class="custom-select" tabindex="0" @blur="open = false">
-        <div class="selected" :class="{ open: open }" @click="open = !open">
-            {{ value }}
-        </div>
-        <div class="items" :class="{ selectHide: !open }">
-            <div @click="
-                open = false;
-            $emit('input', 'all');
-            ">
-                All
-            </div>
-            <div v-for="option of options" :key="option" @click="
-                open = false;
-            $emit('input', option);
-            ">
-                {{ option }}
+    <div class="custom-select" tabindex="0" :class="{ open }" @blur="open = false">
+        <div class="selected" @click="toggleDropdown">{{ capitalizeFirstLetter(value) }}</div>
+        <div class="items" v-show="open">
+            <div @click="selectCategory('all')">All</div>
+            <div v-for="option of options" :key="option" @click="selectCategory(option)">
+                {{ capitalizeFirstLetter(option) }}
             </div>
         </div>
     </div>
@@ -38,6 +28,18 @@ export default {
             open: false,
         };
     },
+    methods: {
+        capitalizeFirstLetter(text) {
+            return text.charAt(0).toUpperCase() + text.slice(1);
+        },
+        toggleDropdown() {
+            this.open = !this.open;
+        },
+        selectCategory(selectedCategory) {
+            this.$emit('input', selectedCategory);
+            this.open = false;
+        },
+    }
 };
 </script>
   
@@ -60,11 +62,6 @@ export default {
     background-color: white;
 }
 
-.custom-select .selected.open {
-    border: 1px solid #ccc;
-    border-radius: 6px 6px 0px 0px;
-}
-
 .custom-select .selected:after {
     position: absolute;
     content: "";
@@ -77,16 +74,15 @@ export default {
 }
 
 .custom-select .items {
-    border-radius: 0px 0px 6px 6px;
+    border-radius: 6px;
     overflow: hidden;
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border: 1px solid #ccc;
     position: absolute;
     left: 0;
     right: 0;
     z-index: 1;
     background-color: white;
+    margin-top: 2px;
 }
 
 .custom-select .items div {
@@ -97,10 +93,6 @@ export default {
 
 .custom-select .items div:hover {
     font-weight: bold;
-}
-
-.selectHide {
-    display: none;
 }
 </style>
   
