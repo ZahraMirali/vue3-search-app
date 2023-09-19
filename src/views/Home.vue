@@ -2,17 +2,15 @@
     <h1>Welcome to the Search App</h1>
     <p>Please use the search bar to find results.</p>
     <div class="grid">
-        <CategoryCard />
+        <CategoryCard v-for="category of categories" :name="category" />
     </div>
 </template>
   
-<script>
+<script setup>
+import { inject, } from 'vue';
 import CategoryCard from '../components/CategoryCard.vue';
 
-export default {
-    name: 'Home',
-    components: { CategoryCard }
-};
+const categories = inject("categories");
 </script>
   
 <style scoped>
