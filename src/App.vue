@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <SearchBar @search="performSearch" />
+      <SearchBar @search="performSearch"/>
     </header>
 
     <main>
@@ -11,9 +11,9 @@
 </template>
 
 <script setup>
-import { provide, ref } from 'vue';
+import {provide, ref} from 'vue';
 import SearchBar from "./components/SearchBar.vue";
-import { getAllCategories } from "./services/search";
+import {getAllCategories} from "./services/search";
 
 const categories = ref([]);
 const loading = ref(true);

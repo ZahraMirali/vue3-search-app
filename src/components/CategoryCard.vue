@@ -51,7 +51,7 @@ const props = defineProps(['name']);
 .card .icon::after {
     content: '';
     position: absolute;
-    inset: 4.5px;
+    inset: 5px;
     border-radius: 50%;
     background-color: rgba(24, 24, 27, 0.04);
     border: 1px solid rgba(24, 24, 27, 0.34);

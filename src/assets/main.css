@@ -1,15 +1,23 @@
 :root {
-  --primary: #00b797;
-  --secondary-light: #dddddd;
-  --secondary: #999999;
+    --primary: #00b797;
+    --secondary-light: #dddddd;
+    --secondary: #999999;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    background-image: url("banner-bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 16px;
 }
 
 body {
-  background-color: #f3f2f0;
-  font-family: Arial;
+    font-family: Arial, serif;
+    /*background-color: rgba(0, 0, 0, 0.24);*/
 }
