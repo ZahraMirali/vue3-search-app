@@ -1,8 +1,10 @@
 <template>
     <div class="search-bar">
-        <input v-model="searchTerm" type="text" placeholder="Search..." />
         <CustomSelect :options="categories" :value="selectedCategory" @input="onInput" />
-        <router-link :to="generateSearchRoute" tag="button">Search</router-link>
+        <form @submit.prevent="submitSearchForm">
+            <input v-model="searchTerm" type="text" placeholder="Search..">
+            <button>+</button>
+        </form>
     </div>
 </template>
   
@@ -28,6 +30,7 @@ export default {
     methods: {
         onInput(event) {
             this.selectedCategory = event;
+            this.submitSearchForm();
         },
         loadCategories() {
             getAllCategories()
@@ -37,11 +40,9 @@ export default {
                     this.loading = false;
                 });
         },
-    },
-    computed: {
-        generateSearchRoute() {
-            console.log('generateSearchRoute SEARCHbAR', this.selectedCategory, 'searchTerm', this.searchTerm)
-            return `/${this.selectedCategory}${this.searchTerm ? '/?keywords=' + this.searchTerm : ''}`;
+        submitSearchForm() {
+            const searchRoute = `/${this.selectedCategory}${this.searchTerm ? '/?keywords=' + this.searchTerm : ''}`
+            this.$router.push(searchRoute);
         },
     },
     watch: {
