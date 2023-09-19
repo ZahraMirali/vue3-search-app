@@ -8,6 +8,7 @@
   
 <script>
 import CustomSelect from "./CustomSelect.vue";
+import { getAllCategories } from "../services/search";
 
 export default {
     components: {
@@ -17,13 +18,25 @@ export default {
         return {
             searchTerm: "",
             selectedCategory: "all",
-            categories: ["all", "people", "companies", "products", "locations"],
+            categories: [],
+            loading: true
         };
+    },
+    created() {
+        this.loadCategories()
     },
     methods: {
         onInput(event) {
             this.selectedCategory = event;
-        }
+        },
+        loadCategories() {
+            getAllCategories()
+                .then((results) => {
+                    console.log("categories:", results)
+                    this.categories = results;
+                    this.loading = false;
+                });
+        },
     },
     computed: {
         generateSearchRoute() {

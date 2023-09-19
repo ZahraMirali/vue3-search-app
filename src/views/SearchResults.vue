@@ -24,7 +24,7 @@ import ProductCard from "../components/ProductCard.vue";
 import LocationCard from "../components/LocationCard.vue";
 import LoadingSpinner from '../components/LoadingSpinner.vue';
 import ErrorAlert from '../components/ErrorAlert.vue';
-import searchCategory from "../services/search";
+import { searchCategory } from "../services/search";
 
 export default {
     props: { keywords: String },
@@ -75,6 +75,7 @@ export default {
             }
         },
         performSearch(selectedCategory, keywords = '') {
+            this.loading = true;
             searchCategory(selectedCategory, keywords)
                 .then((results) => {
                     console.log("results", results)

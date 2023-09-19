@@ -27,35 +27,35 @@ function filterResults(data, searchTerm, categoryName) {
   )
 }
 
-function searchCategory(categoryName, searchTerm) {
+export function searchCategory(selectedCategory, searchTerm) {
   return new Promise((resolve, reject) => {
-    if (categoryName === 'all') {
-      const allResults = {}
+    setTimeout(() => {
+      if (selectedCategory === 'all') {
+        const allResults = {}
 
-      Promise.all(
-        Object.keys(categoriesData).map(async (category) => {
-          const data = filterResults(categoriesData[category], searchTerm, category)
-          allResults[category] = { data: data.slice(0, 3), totalCount: data.length }
+        Object.keys(categoriesData).forEach((categoryName) => {
+          const data = filterResults(categoriesData[categoryName], searchTerm, categoryName)
+          allResults[categoryName] = { data: data.slice(0, 3), totalCount: data.length }
         })
-      )
-        .then(() => {
-          resolve(allResults)
-        })
-        .catch((error) => {
-          reject(error)
-        })
-    } else {
-      const categoryData = categoriesData[categoryName]
 
-      if (!categoryData) {
-        reject(new Error(`Category not found: ${categoryName}`))
+        resolve(allResults)
       } else {
-        const data = filterResults(categoriesData[categoryName], searchTerm, categoryName)
-        const results = { [categoryName]: { data, totalCount: data.length } }
+        if (!categoriesData[selectedCategory]) {
+          reject(new Error(`Category not found: ${selectedCategory}`))
+        }
+
+        const data = filterResults(categoriesData[selectedCategory], searchTerm, selectedCategory)
+        const results = { [selectedCategory]: { data, totalCount: data.length } }
         resolve(results)
       }
-    }
+    }, 200)
   })
 }
 
-export default searchCategory
+export function getAllCategories() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(Object.keys(categoriesData))
+    }, 200)
+  })
+}

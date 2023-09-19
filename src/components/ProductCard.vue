@@ -1,10 +1,10 @@
 <template>
     <div class="card">
         <router-link :to="`/${result.type}/${result.slug}`">
-            <div class="title">{{ result.product }}</div>
+            <div class="title">{{ result.name }}</div>
         </router-link>
-        <div>{{ result.productDescription }}</div>
-        <div>{{ result.productMaterial }}</div>
+        <div>{{ result.description }}</div>
+        <div>{{ result.material }}</div>
         <div>{{ result.price }}</div>
     </div>
 </template>

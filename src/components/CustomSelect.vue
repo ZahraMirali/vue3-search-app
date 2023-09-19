@@ -4,9 +4,14 @@
             {{ value }}
         </div>
         <div class="items" :class="{ selectHide: !open }">
+            <div @click="
+                open = false;
+            $emit('input', 'all');
+            ">
+                All
+            </div>
             <div v-for="option of options" :key="option" @click="
-                value = option;
-            open = false;
+                open = false;
             $emit('input', option);
             ">
                 {{ option }}
