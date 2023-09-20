@@ -40,18 +40,19 @@ function submitSearchForm() {
 <style scoped>
 .search-bar {
   display: flex;
-  box-shadow: 0 -0.625rem 3.125rem 0 black;
-  -webkit-box-shadow: 0 -0.625rem 3.125rem 0 black;
-  -moz-box-shadow: 0 -0.625rem 3.125rem 0 black;
+  box-shadow: 0 0 0 1px hsla(0,0%,54.9%,0.2) ,0 4px 4px rgba(0,0,0,0.3);
+  //box-shadow: 0 -0.625rem 3.125rem 0 black;
+  //-webkit-box-shadow: 0 -0.625rem 3.125rem 0 black;
+  //-moz-box-shadow: 0 -0.625rem 3.125rem 0 black;
   padding: 1.25rem;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.40);
+  background-color: white;
 }
 
 .search-box-with-category {
   display: flex;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #EDF3F8;
   padding: 0;
   border-top: 0.0625rem solid #cccccc;
   border-bottom: 0.0625rem solid #cccccc;

@@ -1,7 +1,9 @@
 :root {
+    --font-size: 16px;
     --primary: #00b797;
     --secondary-light: #dddddd;
     --secondary: #999999;
+    --color-background: #F3F2F0;
 }
 
 * {
@@ -15,8 +17,8 @@ html {
     /*background-repeat: no-repeat;*/
     /*background-size: cover;*/
 
-    background-color: #F3F2F0;
-    font-size: 16px;
+    background-color: var(--color-background);
+    font-size: var(--font-size);
 }
 
 body {
