@@ -58,7 +58,7 @@ export default {
   padding-left: 1em;
   cursor: pointer;
   user-select: none;
-  background-color: white;
+  background-color: transparent;
 }
 
 .custom-select .selected:after {

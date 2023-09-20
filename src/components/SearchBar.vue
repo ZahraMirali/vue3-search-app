@@ -2,6 +2,7 @@
   <div class="search-bar">
     <div class="search-box-with-category">
       <CustomSelect :options="categories" :value="selectedCategory" @input="onInput"/>
+      <span class="separator">|</span>
       <form @submit.prevent="submitSearchForm">
         <div class="search-box">
           <input class="search-input" v-model="searchTerm" type="text" placeholder="Search...">
@@ -53,7 +54,8 @@ function submitSearchForm() {
 
 .search-box-with-category {
   display: flex;
-  background-color: white;
+  align-items: center;
+  background-color: #ffffff;
   padding: 0;
   border-top: 0.0625rem solid #cccccc;
   border-bottom: 0.0625rem solid #cccccc;
@@ -70,7 +72,6 @@ function submitSearchForm() {
   border-radius: 0 2.5rem 2.5rem 0;
   -webkit-border-radius: 0 2.5rem 2.5rem 0;
   -moz-border-radius: 0 2.5rem 2.5rem 0;
-  background-color: white;
   padding: 0;
   overflow: hidden;
 }
@@ -79,7 +80,7 @@ function submitSearchForm() {
   border: 0;
   outline: 0;
   font-size: 1rem;
-  background-color: white;
+  background-color: transparent;
   padding-left: 0.625rem;
   transition: 0.4s ease-in-out;
 }
@@ -90,7 +91,7 @@ function submitSearchForm() {
   border-radius: 2.5rem;
   border: 0;
   outline: 0;
-  background-color: white;
+  background-color: transparent;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -98,5 +99,10 @@ function submitSearchForm() {
 .search-box button:hover {
   background-color: rgba(0, 0, 0, 0.10);
   cursor: pointer;
+}
+
+.separator {
+  color: rgba(0, 0, 0, 0.20);
+  font-size: 1.4rem;
 }
 </style>
