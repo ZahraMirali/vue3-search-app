@@ -49,8 +49,8 @@ export default {
   width: 150px;
   text-align: left;
   outline: none;
-  height: 36px;
-  line-height: 36px;
+  height: 40px;
+  line-height: 40px;
 }
 
 .custom-select .selected {
@@ -65,7 +65,7 @@ export default {
   position: absolute;
   content: "";
   top: 18px;
-  right: 1em;
+  right: 1rem;
   width: 0;
   height: 0;
   border: 6px solid;

@@ -37,12 +37,16 @@ function submitSearchForm() {
 </script>
 
 <style scoped>
+:root {
+  font-size: 16px; /* Set your base font size here */
+}
+
 .search-bar {
   display: flex;
-  box-shadow: 0 -10px 50px 0 black;
-  -webkit-box-shadow: 0 -10px 50px 0 black;
-  -moz-box-shadow: 0 -10px 50px 0 black;
-  padding: 20px;
+  box-shadow: 0 -0.625rem 3.125rem 0 black;
+  -webkit-box-shadow: 0 -0.625rem 3.125rem 0 black;
+  -moz-box-shadow: 0 -0.625rem 3.125rem 0 black;
+  padding: 1.25rem;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.40);
 }
@@ -51,21 +55,21 @@ function submitSearchForm() {
   display: flex;
   background-color: white;
   padding: 0;
-  border-top: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  border-left: 1px solid #cccccc;
-  border-radius: 12px 36px 36px 12px;
-  -webkit-border-radius: 12px 36px 36px 12px;
-  -moz-border-radius: 12px 36px 36px 12px;
+  border-top: 0.0625rem solid #cccccc;
+  border-bottom: 0.0625rem solid #cccccc;
+  border-right: 0.0625rem solid #cccccc;
+  border-left: 0.0625rem solid #cccccc;
+  border-radius: 0.75rem 2.5rem 2.5rem 0.75rem;
+  -webkit-border-radius: 0.75rem 2.5rem 2.5rem 0.75rem;
+  -moz-border-radius: 0.75rem 2.5rem 2.5rem 0.75rem;
 }
 
 .search-box {
   display: flex;
   border: 0;
-  border-radius: 0 36px 36px 0;
-  -webkit-border-radius: 0 36px 36px 0;
-  -moz-border-radius: 0 36px 36px 0;
+  border-radius: 0 2.5rem 2.5rem 0;
+  -webkit-border-radius: 0 2.5rem 2.5rem 0;
+  -moz-border-radius: 0 2.5rem 2.5rem 0;
   background-color: white;
   padding: 0;
   overflow: hidden;
@@ -74,28 +78,25 @@ function submitSearchForm() {
 .search-box input[type=text] {
   border: 0;
   outline: 0;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: white;
-  padding-left: 10px;
+  padding-left: 0.625rem;
   transition: 0.4s ease-in-out;
 }
 
 .search-box button {
-  height: 36px;
-  width: 36px;
-  border-radius: 36px;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 2.5rem;
   border: 0;
   outline: 0;
   background-color: white;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 .search-box button:hover {
   background-color: rgba(0, 0, 0, 0.10);
-  //background-color: rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
-
-
 </style>
