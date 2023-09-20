@@ -10,10 +10,12 @@
 }
 
 html {
-    background-image: url("banner-bg.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /*background-image: url("banner-bg.jpg");*/
+    /*background-attachment: fixed;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+
+    background-color: #F3F2F0;
     font-size: 16px;
 }
 

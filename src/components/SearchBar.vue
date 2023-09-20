@@ -38,10 +38,6 @@ function submitSearchForm() {
 </script>
 
 <style scoped>
-:root {
-  font-size: 16px; /* Set your base font size here */
-}
-
 .search-bar {
   display: flex;
   box-shadow: 0 -0.625rem 3.125rem 0 black;
@@ -82,7 +78,7 @@ function submitSearchForm() {
   font-size: 1rem;
   background-color: transparent;
   padding-left: 0.625rem;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s;
 }
 
 .search-box button {

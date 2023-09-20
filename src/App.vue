@@ -19,10 +19,13 @@ const categories = ref([]);
 const loading = ref(true);
 
 async function loadCategories() {
-  const results = await getAllCategories();
-
-  categories.value = results;
-  loading.value = false;
+  try {
+    const results = await getAllCategories();
+    categories.value = results;
+    loading.value = false;
+  } catch (error) {
+    console.error('Failed to load categories:', error);
+  }
 }
 
 loadCategories();
