@@ -88,11 +88,11 @@ const getCardComponent = (type) => {
 
 <style scoped>
 .search-result-box {
-  border-radius: 0.8rem;
   margin-bottom: 0.8rem;
-  background-color: #fff;
-  padding: 1.6rem 1.2rem 0.4rem 1.6rem;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.6rem;
+  background-color: var(--color-background);
+  box-shadow: var(--elevation-lined);
+  border-radius: var(--corner-radius-medium);
 }
 
 .result-type {
