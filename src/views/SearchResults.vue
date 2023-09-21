@@ -38,7 +38,7 @@ const error = ref(null);
 const searchResults = ref({});
 
 const generateSearchRoute = computed(() => {
-    return `${props.keywords ? '/' + props.keywords : ''}`;
+    return `${props.keywords ? '/?keywords=' + props.keywords : ''}`
 });
 
 const performSearch = (selectedCategory, keywords = '') => {
