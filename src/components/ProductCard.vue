@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <router-link :to="`/${result.type}/${result.slug}`">
+    <router-link :to="`/${type}/${result.slug}`">
       <div class="title">{{ result.name }}</div>
     </router-link>
     <div>{{ result.description }}</div>
@@ -14,6 +14,7 @@ import { defineProps } from 'vue';
 
 defineProps({
   result: Object,
+  type: String
 });
 </script>
   

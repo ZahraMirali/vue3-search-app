@@ -6,7 +6,7 @@
             <h2 class="result-type">{{ type }}</h2>
             <ul class="result-list">
                 <li v-for="item in result.data" :key="item.slug" class="result-item">
-                    <component :is="getCardComponent(type)" :result="item" />
+                    <component :is="getCardComponent(type)" :result="item" :type="type" />
                 </li>
             </ul>
             <router-link v-if="result.data.length < result.totalCount" :to="`/${type}${generateSearchRoute}`"

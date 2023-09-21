@@ -1,12 +1,11 @@
 <template>
     <div class="card">
         <div class="card-header">
-            <!-- Display the icon based on sexType -->
             <div class="sex-icon">
                 <component :is="result.sexType === 'male' ? MaleIcon : FemaleIcon" />
             </div>
             <div class="title-container">
-                <router-link :to="`/${result.type}/${result.slug}`">
+                <router-link :to="`/${type}/${result.slug}`">
                     <div class="title">{{ result.firstName }} {{ result.lastName }}</div>
                 </router-link>
                 <div class="job-title">{{ result.jobTitle }}</div>
@@ -23,5 +22,6 @@ import { defineProps } from 'vue';
 
 defineProps({
     result: Object,
+    type: String
 });
 </script>
