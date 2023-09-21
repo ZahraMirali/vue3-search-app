@@ -2,10 +2,10 @@
   <h1>Welcome to Search App</h1>
   <p>Please use the search bar to find results.</p>
   <div class="grid">
-    <RouterLink v-for="category of categories" :to="`/${category}`">
-      <CategoryCard :name="capitalizeFirstLetter(category)">
+    <RouterLink v-for="category of categories" :to="`/${category.value}`">
+      <CategoryCard :name="category.label" :description="category.description">
         <template v-slot:icon>
-          <component :is="getIconComponent(category)" />
+          <component :is="getIconComponent(category.value)" />
         </template>
       </CategoryCard>
     </RouterLink>
@@ -36,10 +36,6 @@ const getIconComponent = (type) => {
     default:
       return 'div'
   }
-}
-
-function capitalizeFirstLetter(text) {
-  return text.charAt(0).toUpperCase() + text.slice(1)
 }
 </script>
 

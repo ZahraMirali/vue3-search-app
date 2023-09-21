@@ -2,6 +2,7 @@ import peopleData from '../data/people.json'
 import companiesData from '../data/companies.json'
 import productsData from '../data/products.json'
 import locationsData from '../data/locations.json'
+import categories from '../data/categories.json'
 
 const searchConfig = {
   people: ['firstName', 'lastName', 'bio'],
@@ -56,7 +57,7 @@ export function searchCategory(selectedCategory, searchTerm) {
 export function getAllCategories() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(Object.keys(categoriesData))
+      resolve(categories)
     }, 200)
   })
 }

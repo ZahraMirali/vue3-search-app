@@ -1,13 +1,13 @@
 <template>
   <div :class="{ open }" class="custom-select" tabindex="0" @blur="open = false">
     <div class="selected" @click="toggleDropdown">
-      {{ capitalizeFirstLetter(value) }}
+      {{ getSelectedOption().label }}
       <div class="arrow"></div>
     </div>
     <div v-show="open" class="items">
-      <div @click="selectCategory('all')">All</div>
-      <div v-for="option of options" :key="option" @click="selectCategory(option)">
-        {{ capitalizeFirstLetter(option) }}
+      <div @click="selectOption('all')">All</div>
+      <div v-for="option of options" :key="option" @click="selectOption(option.value)">
+        {{ option.label }}
       </div>
     </div>
   </div>
@@ -16,7 +16,7 @@
 <script setup>
 import { defineProps, ref } from 'vue'
 
-defineProps({
+const props = defineProps({
   options: {
     type: Array,
     required: true
@@ -31,16 +31,16 @@ defineProps({
 const open = ref(false)
 const emit = defineEmits(['input'])
 
-function capitalizeFirstLetter(text) {
-  return text.charAt(0).toUpperCase() + text.slice(1)
+function getSelectedOption() {
+  return props.options.find(item => item.value === props.value) || { label: 'All', value: "all" }
 }
 
 function toggleDropdown() {
   open.value = !open.value
 }
 
-function selectCategory(selectedCategory) {
-  emit('input', selectedCategory)
+function selectOption(selectedValue) {
+  emit('input', selectedValue)
   open.value = false
 }
 </script>
