@@ -1,6 +1,9 @@
 <template>
   <div class="custom-select" tabindex="0" :class="{ open }" @blur="open = false">
-    <div class="selected" @click="toggleDropdown">{{ capitalizeFirstLetter(value) }}</div>
+    <div class="selected" @click="toggleDropdown">
+      {{ capitalizeFirstLetter(value) }}
+      <div class="arrow"></div>
+    </div>
     <div class="items" v-show="open">
       <div @click="selectCategory('all')">All</div>
       <div v-for="option of options" :key="option" @click="selectCategory(option)">
@@ -46,7 +49,6 @@ export default {
 <style scoped>
 .custom-select {
   position: relative;
-  width: 9.375rem;
   text-align: left;
   outline: none;
   height: 2.5rem;
@@ -55,21 +57,12 @@ export default {
 
 .custom-select .selected {
   border-radius: 0.375rem;
-  padding-left: 0.625rem;
+  padding: 0 0.625rem;
   cursor: pointer;
   user-select: none;
   background-color: transparent;
-}
-
-.custom-select .selected:after {
-  position: absolute;
-  content: "";
-  top: 1.125rem;
-  right: 1rem;
-  width: 0;
-  height: 0;
-  border: 0.375rem solid;
-  border-color: black transparent transparent transparent;
+  display: flex;
+  justify-content: space-between;
 }
 
 .custom-select .items {
@@ -97,5 +90,14 @@ export default {
 .custom-select .items div:hover {
   background-color: rgba(0, 0, 0, 0.05);
   color: #52525B;
+}
+
+.arrow {
+  border: 0.375rem solid;
+  border-color: black transparent transparent transparent;
+  display: inline;
+  align-self: center;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 </style>
