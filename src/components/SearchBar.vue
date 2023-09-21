@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { inject, ref } from 'vue'
+import { inject, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import CustomSelect from './CustomSelect.vue'
 import IconSearch from './icons/IconSearch.vue'
@@ -28,15 +28,21 @@ const categories = inject('categories')
 const selectedCategory = ref(route.params.type || 'all')
 const searchTerm = ref(route.query.keywords || '')
 
+
+watch(route, () => {
+  selectedCategory.value = route.params.type || 'all';
+  searchTerm.value = route.query.keywords || '';
+})
+
+
 function onInput(event) {
   selectedCategory.value = event
   submitSearchForm()
 }
 
 function submitSearchForm() {
-  const searchRoute = `/${selectedCategory.value}${
-    searchTerm.value ? '/?keywords=' + searchTerm.value : ''
-  }`
+  const searchRoute = `/${selectedCategory.value}${searchTerm.value ? '/?keywords=' + searchTerm.value : ''
+    }`
   router.push(searchRoute)
 }
 </script>

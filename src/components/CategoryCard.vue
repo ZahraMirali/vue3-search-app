@@ -4,14 +4,14 @@
       <slot name="icon"></slot>
     </span>
     <h4>{{ name }}</h4>
-    <p>Standard chunk of Lorem Ipsum used since the 1500s is showed below for those interested.</p>
+    <p>{{ description }}</p>
   </div>
 </template>
 
 <script setup>
 import { defineProps } from 'vue'
 
-const props = defineProps(['name'])
+defineProps(['name', 'description'])
 </script>
 
 <style scoped>

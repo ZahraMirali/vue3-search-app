@@ -9,11 +9,8 @@
           <component :is="getCardComponent(type)" :result="item" :type="type" />
         </li>
       </ul>
-      <router-link
-        v-if="result.data.length < result.totalCount"
-        :to="`/${type}${generateSearchRoute}`"
-        class="see-all-link"
-      >
+      <router-link v-if="result.data.length < result.totalCount" :to="`/${type}${generateSearchRoute}`"
+        class="see-all-link">
         See all {{ type }} results
       </router-link>
     </div>
@@ -61,12 +58,10 @@ const performSearch = (selectedCategory, keywords = '') => {
 }
 
 onMounted(() => {
-  console.log('ALL CREATED = ', route.params.type, route.query.keywords)
   performSearch(route.params.type, route.query.keywords)
 })
 
 watch(route, () => {
-  console.log('ALL WATCH = ', route.params.type, route.query.keywords)
   performSearch(route.params.type, route.query.keywords)
 })
 

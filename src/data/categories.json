@@ -1,0 +1,22 @@
+[
+  {
+    "label": "People",
+    "value": "people",
+    "description": "Explore lives, achievements, and stories of notable individuals who left their mark on history and society."
+  },
+  {
+    "label": "Companies",
+    "value": "companies",
+    "description": "Discover insights into businesses, from startups to global corporations, and stay updated on industry trends."
+  },
+  {
+    "label": "Products",
+    "value": "products",
+    "description": "Find detailed info, reviews, and recommendations for a wide range of products, from tech gadgets to essentials."
+  },
+  {
+    "label": "Locations",
+    "value": "locations",
+    "description": "Embark on virtual journeys to explore diverse destinations, uncovering rich history, culture, and attractions."
+  }
+]
