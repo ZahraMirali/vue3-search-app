@@ -47,7 +47,7 @@ defineProps({
   font-weight: bold;
 }
 
-.card .details .title:hover {
+.card .details:hover .title {
   text-decoration: underline;
 }
 

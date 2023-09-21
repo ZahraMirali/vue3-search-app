@@ -111,7 +111,7 @@ const getCardComponent = (type) => {
 }
 
 .result-item {
-  border-bottom: 1px solid #d1d1d1;
+  border-bottom: 1px solid var(--color-shadow);
   padding: 0.5rem 0;
 }
 
