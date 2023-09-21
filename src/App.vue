@@ -2,7 +2,7 @@
   <LoadingSpinner v-if="loading" />
   <template v-else>
     <header>
-      <SearchBar @search="performSearch" />
+      <SearchBar />
     </header>
 
     <main>
@@ -22,12 +22,8 @@ const categories = ref([])
 const loading = ref(true)
 
 async function loadCategories() {
-  try {
-    categories.value = await getAllCategories()
-    loading.value = false
-  } catch (error) {
-    console.error('Failed to load categories:', error)
-  }
+  categories.value = await getAllCategories()
+  loading.value = false
 }
 
 loadCategories()
