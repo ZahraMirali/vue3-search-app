@@ -1,20 +1,22 @@
 <template>
   <LoadingSpinner v-if="loading" />
   <ErrorAlert v-else-if="error" :message="error" />
-  <div v-else class="search-results">
-    <div v-for="(result, type) in searchResults" :key="type" class="search-result-box">
-      <h2 class="result-type">{{ type }}</h2>
-      <ul class="result-list">
-        <li v-for="item in result.data" :key="item.slug" class="result-item">
-          <component :is="getCardComponent(type)" :result="item" :type="type" />
-        </li>
-      </ul>
+  <div v-else>
+    <div v-for="(result, type) in searchResults" :key="type" class="search-results">
+      <div class="search-result-box">
+        <h2 class="result-type">{{ type }}</h2>
+        <ul class="result-list">
+          <li v-for="item in result.data" :key="item.slug" class="result-item">
+            <component :is="getCardComponent(type)" :result="item" :type="type" />
+          </li>
+        </ul>
+      </div>
       <router-link
         v-if="result.data.length < result.totalCount"
         :to="`/${type}${generateSearchRoute}`"
         class="see-all-link"
       >
-        See all {{ type }} results
+        <div class="more-results">See all {{ type }} results</div>
       </router-link>
     </div>
   </div>
@@ -85,16 +87,20 @@ const getCardComponent = (type) => {
 </script>
 
 <style scoped>
-.search-result-box {
-  margin-bottom: 0.8rem;
-  padding: 1.6rem;
+.search-results {
+  margin-bottom: 1rem;
   background-color: var(--color-background);
   box-shadow: var(--elevation-lined);
   border-radius: var(--corner-radius-medium);
+  overflow: hidden;
+}
+
+.search-result-box {
+  padding: 1rem;
 }
 
 .result-type {
-  font-weight: 600;
+  font-weight: bold;
   font-size: 1.6rem;
   color: var(--color-text);
 }
@@ -106,10 +112,27 @@ const getCardComponent = (type) => {
 
 .result-item {
   border-bottom: 1px solid #d1d1d1;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .result-item:last-child {
   border-bottom: none;
+}
+
+.search-results .more-results {
+  border-top: 1px solid var(--color-shadow);
+  max-width: 100%;
+  width: 100%;
+  padding: 0.6rem;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.search-results .more-results:hover {
+  background-color: var(--color-background-hover);
+}
+
+.search-results a:hover {
+  text-decoration: none;
 }
 </style>

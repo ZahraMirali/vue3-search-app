@@ -5,10 +5,10 @@
     </div>
     <div class="details">
       <router-link :to="`/${type}/${result.slug}`">
-        <span class="title">{{ result.firstName }} {{ result.lastName }}</span>
+        <div class="title">{{ result.firstName }} {{ result.lastName }}</div>
+        <div class="subtitle-primary">{{ result.jobTitle }}</div>
+        <div class="subtitle-secondary">{{ result.bio }}</div>
       </router-link>
-      <div class="subtitle">{{ result.jobTitle }}</div>
-      <div class="bio">{{ result.bio }}</div>
     </div>
   </div>
 </template>
@@ -26,15 +26,20 @@ defineProps({
 <style>
 .card {
   display: flex;
-}
-
-.card .icon {
-  display: flex;
   flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: var(--corner-radius-medium);
+  transition: 0.4s;
 }
 
 .card .details {
+  width: 100%;
   margin-left: 6px;
+}
+
+.card .details a:hover {
+  text-decoration: none;
 }
 
 .card .details .title {
@@ -42,11 +47,17 @@ defineProps({
   font-weight: bold;
 }
 
-.card .details .subtitle {
+.card .details .title:hover {
+  text-decoration: underline;
+}
+
+.card .details .subtitle-primary {
   font-size: 0.8rem;
   color: var(--color-text);
+  text-decoration: none;
 }
-.card .details .bio {
+
+.card .details .subtitle-secondary {
   font-size: 0.8rem;
   color: var(--color-text-gray);
 }

@@ -6,6 +6,8 @@
   --color-background: #ffffff;
   --color-text: rgb(0 0 0/0.9);
   --color-text-gray: rgb(0 0 0/0.6);
+  --color-shadow: rgb(140 140 140/0.2);
+  --color-background-hover: rgba(0,0,0,0.08);
 
   --corner-radius-small: 0.4rem;
   --corner-radius-medium: 0.8rem;
@@ -15,11 +17,10 @@
 
   --border-width-small: 0.0625rem;
 
-  --color-border-faint: rgb(140 140 140/0.2);
   --elevation-flat: none;
-  --elevation-lined: 0px 0px 0px 1px var(--color-border-faint);
-  /*--elevation-raised: var(--elevation-lined),0px 4px 4px var(--color-shadow);*/
-  /*--voyager-elevation-text-theater: 0 0 2px var(--black-a60);*/
+  --elevation-lined: 0px 0px 0px 1px var(--color-shadow);
+  --elevation-raised: var(--elevation-lined), 0px 4px 4px var(--color-shadow);
+  --voyager-elevation-text-theater: 0 0 2px var(--color-shadow);
 }
 
 * {
