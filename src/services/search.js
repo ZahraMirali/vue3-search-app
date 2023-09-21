@@ -41,7 +41,8 @@ export function searchCategory(selectedCategory, searchTerm) {
         resolve(allResults)
       } else {
         if (!categoriesData[selectedCategory]) {
-          reject(new Error(`Category not found: ${selectedCategory}`))
+          reject(new Error(`Category "${selectedCategory}" not found`))
+          return
         }
 
         const data = filterResults(categoriesData[selectedCategory], searchTerm, selectedCategory)

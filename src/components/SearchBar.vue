@@ -1,13 +1,13 @@
 <template>
   <div class="search-bar">
     <div class="search-box-with-category">
-      <CustomSelect :options="categories" :value="selectedCategory" @input="onInput"/>
+      <CustomSelect :options="categories" :value="selectedCategory" @input="onInput" />
       <span class="separator">|</span>
       <form @submit.prevent="submitSearchForm">
         <div class="search-box">
           <input class="search-input" v-model="searchTerm" type="text" placeholder="Search...">
           <button class="search-button">
-            <IconSearch/>
+            <IconSearch />
           </button>
         </div>
       </form>
@@ -16,15 +16,17 @@
 </template>
 
 <script setup>
-import {inject, ref} from 'vue';
-import {useRouter} from 'vue-router';
+import { inject, ref, } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 import CustomSelect from "./CustomSelect.vue";
 import IconSearch from './icons/IconSearch.vue';
+const router = useRouter();
+const route = useRoute();
 
 const categories = inject("categories");
-const selectedCategory = ref("all");
-const searchTerm = ref("");
-const router = useRouter();
+const selectedCategory = ref(route.params.type || "all");
+const searchTerm = ref(route.query.keywords || "");
+
 
 function onInput(event) {
   selectedCategory.value = event;
@@ -40,7 +42,7 @@ function submitSearchForm() {
 <style scoped>
 .search-bar {
   display: flex;
-  box-shadow: 0 0 0 1px hsla(0,0%,54.9%,0.2) ,0 4px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 0 0 1px hsla(0, 0%, 54.9%, 0.2), 0 4px 4px rgba(0, 0, 0, 0.3);
   //box-shadow: 0 -0.625rem 3.125rem 0 black;
   //-webkit-box-shadow: 0 -0.625rem 3.125rem 0 black;
   //-moz-box-shadow: 0 -0.625rem 3.125rem 0 black;

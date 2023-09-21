@@ -1,19 +1,22 @@
 <template>
-  <div id="app">
+  <LoadingSpinner v-if="loading" />
+  <template v-else>
     <header>
-      <SearchBar @search="performSearch"/>
+      <SearchBar @search="performSearch" />
     </header>
 
     <main>
-      <router-view></router-view>
+      <RouterView />
     </main>
-  </div>
+  </template>
 </template>
 
 <script setup>
-import {provide, ref} from 'vue';
+import { provide, ref } from 'vue';
 import SearchBar from "./components/SearchBar.vue";
-import {getAllCategories} from "./services/search";
+import LoadingSpinner from './components/LoadingSpinner.vue';
+import { getAllCategories } from "./services/search";
+import { RouterView } from 'vue-router'
 
 const categories = ref([]);
 const loading = ref(true);
