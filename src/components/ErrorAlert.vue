@@ -5,13 +5,12 @@
     </div>
 </template>
   
-<script>
-import NotExistIcon from './icons/IconNotExist.vue';
 
-export default {
-    components: { NotExistIcon },
-    props: { message: String }
-};
+<script setup>
+import NotExistIcon from './icons/IconNotExist.vue';
+import { defineProps } from 'vue';
+
+defineProps({ message: String });
 </script>
 
 <style scoped>

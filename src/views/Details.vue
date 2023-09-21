@@ -4,11 +4,11 @@
     </div>
 </template>
   
-<script>
-export default {
-    name: 'Details',
-    props: { type: String, slug: String },
-};
+
+<script setup>
+import { defineProps } from 'vue';
+
+defineProps({ type: String, slug: String });
 </script>
   
 <style scoped></style>

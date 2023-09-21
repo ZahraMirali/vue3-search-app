@@ -10,12 +10,12 @@
     </div>
 </template>
   
-<script>
-export default {
-    props: {
-        result: Object,
-    },
-};
+<script setup>
+import { defineProps } from 'vue';
+
+defineProps({
+    result: Object,
+});
 </script>
 
   

@@ -3,7 +3,7 @@
         <div class="card-header">
             <!-- Display the icon based on sexType -->
             <div class="sex-icon">
-                <component :is="result.sexType === 'male' ? 'MaleIcon' : 'FemaleIcon'" />
+                <component :is="result.sexType === 'male' ? MaleIcon : FemaleIcon" />
             </div>
             <div class="title-container">
                 <router-link :to="`/${result.type}/${result.slug}`">
@@ -16,17 +16,12 @@
     </div>
 </template>
   
-<script>
+<script setup>
 import MaleIcon from './icons/IconMale.vue';
 import FemaleIcon from './icons/IconFemale.vue';
+import { defineProps } from 'vue';
 
-export default {
-    props: {
-        result: Object,
-    },
-    components: {
-        MaleIcon,
-        FemaleIcon,
-    },
-};
+defineProps({
+    result: Object,
+});
 </script>

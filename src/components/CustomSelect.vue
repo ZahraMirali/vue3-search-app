@@ -13,37 +13,37 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    options: {
-      type: Array,
-      required: true,
-    },
-    value: {
-      type: String,
-      required: false,
-      default: null,
-    },
+<script setup>
+import { defineProps, ref } from 'vue';
+
+defineProps({
+  options: {
+    type: Array,
+    required: true,
   },
-  data() {
-    return {
-      open: false,
-    };
-  },
-  methods: {
-    capitalizeFirstLetter(text) {
-      return text.charAt(0).toUpperCase() + text.slice(1);
-    },
-    toggleDropdown() {
-      this.open = !this.open;
-    },
-    selectCategory(selectedCategory) {
-      this.$emit('input', selectedCategory);
-      this.open = false;
-    },
+  value: {
+    type: String,
+    required: false,
+    default: null,
   }
-};
+});
+
+const open = ref(false)
+const emit = defineEmits(["input"])
+
+
+function capitalizeFirstLetter(text) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+function toggleDropdown() {
+  open.value = !open.value;
+}
+
+function selectCategory(selectedCategory) {
+  emit('input', selectedCategory);
+  open.value = false;
+}
 </script>
 
 <style scoped>
