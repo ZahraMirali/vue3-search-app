@@ -9,8 +9,11 @@
           <component :is="getCardComponent(type)" :result="item" :type="type" />
         </li>
       </ul>
-      <router-link v-if="result.data.length < result.totalCount" :to="`/${type}${generateSearchRoute}`"
-        class="see-all-link">
+      <router-link
+        v-if="result.data.length < result.totalCount"
+        :to="`/${type}${generateSearchRoute}`"
+        class="see-all-link"
+      >
         See all {{ type }} results
       </router-link>
     </div>
@@ -18,7 +21,7 @@
 </template>
 
 <script setup>
-import PersonCard from '../components/PersonCard.vue'
+import PersonCard from '../components/PeopleCard.vue'
 import CompanyCard from '../components/CompanyCard.vue'
 import ProductCard from '../components/ProductCard.vue'
 import LocationCard from '../components/LocationCard.vue'
@@ -93,7 +96,7 @@ const getCardComponent = (type) => {
 .result-type {
   font-weight: 600;
   font-size: 1.6rem;
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--color-text);
 }
 
 .result-list {

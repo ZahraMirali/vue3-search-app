@@ -32,7 +32,7 @@ const open = ref(false)
 const emit = defineEmits(['input'])
 
 function getSelectedOption() {
-  return props.options.find(item => item.value === props.value) || { label: 'All', value: "all" }
+  return props.options.find((item) => item.value === props.value) || { label: 'All', value: 'all' }
 }
 
 function toggleDropdown() {
@@ -75,7 +75,7 @@ function selectOption(selectedValue) {
   right: 0;
   z-index: 10;
   background-color: white;
-  margin-top: 0rem;
+  margin-top: 0;
   box-shadow: 0.625rem 0.625rem 3.75rem -1rem rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0.625rem 0.625rem 3.75rem -1rem rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0.625rem 0.625rem 3.75rem -1rem rgba(0, 0, 0, 0.6);

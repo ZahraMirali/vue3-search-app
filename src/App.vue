@@ -40,6 +40,6 @@ header {
 }
 
 main {
-  padding: 20px;
+  padding: 100px 20px 20px;
 }
 </style>

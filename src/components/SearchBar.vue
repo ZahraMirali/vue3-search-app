@@ -28,12 +28,10 @@ const categories = inject('categories')
 const selectedCategory = ref(route.params.type || 'all')
 const searchTerm = ref(route.query.keywords || '')
 
-
 watch(route, () => {
-  selectedCategory.value = route.params.type || 'all';
-  searchTerm.value = route.query.keywords || '';
+  selectedCategory.value = route.params.type || 'all'
+  searchTerm.value = route.query.keywords || ''
 })
-
 
 function onInput(event) {
   selectedCategory.value = event
@@ -41,8 +39,9 @@ function onInput(event) {
 }
 
 function submitSearchForm() {
-  const searchRoute = `/${selectedCategory.value}${searchTerm.value ? '/?keywords=' + searchTerm.value : ''
-    }`
+  const searchRoute = `/${selectedCategory.value}${
+    searchTerm.value ? '/?keywords=' + searchTerm.value : ''
+  }`
   router.push(searchRoute)
 }
 </script>
@@ -56,6 +55,7 @@ function submitSearchForm() {
   padding: 1.25rem;
   width: 100%;
   background-color: white;
+  position: fixed;
 }
 
 .search-box-with-category {

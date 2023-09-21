@@ -5,6 +5,7 @@
   --color-background-canvas: #f4f2ee;
   --color-background: #ffffff;
   --color-text: rgb(0 0 0/0.9);
+  --color-text-gray: rgb(0 0 0/0.6);
 
   --corner-radius-small: 0.4rem;
   --corner-radius-medium: 0.8rem;
@@ -14,7 +15,7 @@
 
   --border-width-small: 0.0625rem;
 
-  --color-border-faint : rgb(140 140 140/0.2);
+  --color-border-faint: rgb(140 140 140/0.2);
   --elevation-flat: none;
   --elevation-lined: 0px 0px 0px 1px var(--color-border-faint);
   /*--elevation-raised: var(--elevation-lined),0px 4px 4px var(--color-shadow);*/
@@ -38,8 +39,6 @@ html {
 
 body {
   min-height: 100vh;
-  /*width: -moz-fit-content;*/
-  /*width: fit-content;*/
   font-family: Arial, serif;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
@@ -48,7 +47,6 @@ body {
 }
 
 #app {
-  /*width: max-content;*/
 }
 
 body,
@@ -59,4 +57,16 @@ h4,
 h5,
 p {
   color: var(--color-text);
+}
+
+a,
+a:visited,
+a:hover {
+  color: var(--color-text);
+  text-decoration-color: var(--color-text);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
