@@ -17,7 +17,7 @@
     </div>
 </template>
   
-<script>
+<script setup>
 import PersonCard from "../components/PersonCard.vue";
 import CompanyCard from "../components/CompanyCard.vue";
 import ProductCard from "../components/ProductCard.vue";
@@ -25,69 +25,59 @@ import LocationCard from "../components/LocationCard.vue";
 import LoadingSpinner from '../components/LoadingSpinner.vue';
 import ErrorAlert from '../components/ErrorAlert.vue';
 import { searchCategory } from "../services/search";
+import { computed, onMounted, watch, ref } from 'vue'
+import { useRoute } from 'vue-router';
+const route = useRoute();
 
-export default {
-    props: { keywords: String },
-    components: {
-        PersonCard,
-        CompanyCard,
-        ProductCard,
-        LocationCard,
-        LoadingSpinner,
-        ErrorAlert
-    },
-    data() {
-        return {
-            loading: true,
-            error: null,
-            searchResults: {},
-        };
-    },
-    computed: {
-        generateSearchRoute() {
-            return `${this.keywords ? '/' + this.keywords : ''}`;
-        },
-    },
-    created() {
-        console.log("ALL CREATED = ", this.$route.params.type, this.$route.query.keywords)
-        this.performSearch(this.$route.params.type, this.$route.query.keywords);
-    },
-    watch: {
-        $route(to) {
-            const routeParams = to.params;
-            console.log("ALL WATCH = ", routeParams.type, to.query.keywords)
-            this.performSearch(routeParams.type, to.query.keywords);
-        },
-    },
-    methods: {
-        getCardComponent(type) {
-            switch (type) {
-                case "people":
-                    return "PersonCard";
-                case "companies":
-                    return "CompanyCard";
-                case "products":
-                    return "ProductCard";
-                case "locations":
-                    return "LocationCard";
-                default:
-                    return "div";
-            }
-        },
-        performSearch(selectedCategory, keywords = '') {
-            this.loading = true;
-            searchCategory(selectedCategory, keywords)
-                .then((results) => {
-                    console.log("results", results)
-                    this.searchResults = results;
-                })
-                .catch((error) => {
-                    this.error = error;
-                })
-                .finally(() => {
-                    this.loading = false;
-                })
-        },
+const props = defineProps({
+    keywords: String,
+});
+
+const loading = ref(true);
+const error = ref(null);
+const searchResults = ref({});
+
+const generateSearchRoute = computed(() => {
+    return `${props.keywords ? '/' + props.keywords : ''}`;
+});
+
+const performSearch = (selectedCategory, keywords = '') => {
+    loading.value = true;
+    searchCategory(selectedCategory, keywords)
+        .then((results) => {
+            error.value = null;
+            searchResults.value = results;
+        })
+        .catch((err) => {
+            error.value = err;
+        })
+        .finally(() => {
+            loading.value = false;
+        });
+};
+
+onMounted(() => {
+    console.log("ALL CREATED = ", route.params.type, route.query.keywords);
+    performSearch(route.params.type, route.query.keywords);
+});
+
+watch(route, () => {
+    console.log("ALL WATCH = ", route.params.type, route.query.keywords);
+    performSearch(route.params.type, route.query.keywords);
+});
+
+const getCardComponent = (type) => {
+    switch (type) {
+        case "people":
+            return PersonCard;
+        case "companies":
+            return CompanyCard;
+        case "products":
+            return ProductCard;
+        case "locations":
+            return LocationCard;
+        default:
+            return 'div';
     }
 };
 </script>
