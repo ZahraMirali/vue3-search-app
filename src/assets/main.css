@@ -1,5 +1,4 @@
 :root {
-    --font-size: 16px;
     --primary: #00b797;
     --secondary-light: #dddddd;
     --secondary: #999999;
@@ -17,10 +16,21 @@ html {
     /*background-repeat: no-repeat;*/
     /*background-size: cover;*/
 
-    background-color: var(--color-background);
-    font-size: var(--font-size);
+    font-size: 16px;
+    background: var(--color-background);
 }
 
 body {
+    min-height: 100vh;
+    /*width: -moz-fit-content;*/
+    /*width: fit-content;*/
     font-family: Arial, serif;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+    /*width: max-content;*/
 }

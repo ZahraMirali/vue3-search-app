@@ -1,10 +1,10 @@
 <template>
-  <div class="custom-select" tabindex="0" :class="{ open }" @blur="open = false">
+  <div :class="{ open }" class="custom-select" tabindex="0" @blur="open = false">
     <div class="selected" @click="toggleDropdown">
       {{ capitalizeFirstLetter(value) }}
       <div class="arrow"></div>
     </div>
-    <div class="items" v-show="open">
+    <div v-show="open" class="items">
       <div @click="selectCategory('all')">All</div>
       <div v-for="option of options" :key="option" @click="selectCategory(option)">
         {{ capitalizeFirstLetter(option) }}
@@ -14,40 +14,40 @@
 </template>
 
 <script setup>
-import { defineProps, ref } from 'vue';
+import { defineProps, ref } from 'vue'
 
 defineProps({
   options: {
     type: Array,
-    required: true,
+    required: true
   },
   value: {
     type: String,
     required: false,
-    default: null,
+    default: null
   }
-});
+})
 
 const open = ref(false)
-const emit = defineEmits(["input"])
-
+const emit = defineEmits(['input'])
 
 function capitalizeFirstLetter(text) {
-  return text.charAt(0).toUpperCase() + text.slice(1);
+  return text.charAt(0).toUpperCase() + text.slice(1)
 }
 
 function toggleDropdown() {
-  open.value = !open.value;
+  open.value = !open.value
 }
 
 function selectCategory(selectedCategory) {
-  emit('input', selectedCategory);
-  open.value = false;
+  emit('input', selectedCategory)
+  open.value = false
 }
 </script>
 
 <style scoped>
 .custom-select {
+  width: 120px;
   position: relative;
   text-align: left;
   outline: none;
@@ -60,6 +60,7 @@ function selectCategory(selectedCategory) {
   padding: 0 0.625rem;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
@@ -74,7 +75,7 @@ function selectCategory(selectedCategory) {
   right: 0;
   z-index: 10;
   background-color: white;
-  margin-top: 0.0rem;
+  margin-top: 0rem;
   box-shadow: 0.625rem 0.625rem 3.75rem -1rem rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0.625rem 0.625rem 3.75rem -1rem rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0.625rem 0.625rem 3.75rem -1rem rgba(0, 0, 0, 0.6);
@@ -85,11 +86,12 @@ function selectCategory(selectedCategory) {
   padding-left: 0.625rem;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .custom-select .items div:hover {
   background-color: rgba(0, 0, 0, 0.05);
-  color: #52525B;
+  color: #52525b;
 }
 
 .arrow {

@@ -12,32 +12,34 @@
 </template>
 
 <script setup>
-import { provide, ref } from 'vue';
-import SearchBar from "./components/SearchBar.vue";
-import LoadingSpinner from './components/LoadingSpinner.vue';
-import { getAllCategories } from "./services/search";
+import { provide, ref } from 'vue'
+import SearchBar from './components/SearchBar.vue'
+import LoadingSpinner from './components/LoadingSpinner.vue'
+import { getAllCategories } from './services/search'
 import { RouterView } from 'vue-router'
 
-const categories = ref([]);
-const loading = ref(true);
+const categories = ref([])
+const loading = ref(true)
 
 async function loadCategories() {
   try {
-    const results = await getAllCategories();
-    categories.value = results;
-    loading.value = false;
+    categories.value = await getAllCategories()
+    loading.value = false
   } catch (error) {
-    console.error('Failed to load categories:', error);
+    console.error('Failed to load categories:', error)
   }
 }
 
-loadCategories();
+loadCategories()
 
 provide('categories', categories)
 </script>
 
 <style>
 header {
-  margin-bottom: 20px;
+}
+
+main {
+  padding: 20px;
 }
 </style>

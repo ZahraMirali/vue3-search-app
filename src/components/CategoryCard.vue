@@ -4,29 +4,28 @@
       <slot name="icon"></slot>
     </span>
     <h4>{{ name }}</h4>
-    <p>
-      Standard chunk of Lorem Ipsum used since the 1500s is showed below
-      for those interested.
-    </p>
+    <p>Standard chunk of Lorem Ipsum used since the 1500s is showed below for those interested.</p>
   </div>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps } from 'vue'
 
-const props = defineProps(['name']);
-
+const props = defineProps(['name'])
 </script>
 
 <style scoped>
 .card {
-  background-color: #FAFAFA;
-  box-shadow: 0 3px 6px rgba(24, 24, 27, 0.02), 0 2px 7px rgba(24, 24, 27, 0.04), 0 0 0 1px rgba(24, 24, 27, 0.08);
+  background-color: #fafafa;
+  box-shadow:
+    0 3px 6px rgba(24, 24, 27, 0.02),
+    0 2px 7px rgba(24, 24, 27, 0.04),
+    0 0 0 1px rgba(24, 24, 27, 0.08);
   padding: 56px 16px 16px 16px;
   border-radius: 15px;
   cursor: pointer;
   position: relative;
-  transition: box-shadow .25s;
+  transition: box-shadow 0.25s;
 }
 
 .card::before {
@@ -52,7 +51,10 @@ const props = defineProps(['name']);
   background-color: rgba(24, 24, 27, 0.04);
   border: 1px solid rgba(24, 24, 27, 0.34);
   backdrop-filter: blur(2px);
-  transition: background-color .25s, border-color .25s;
+  -webkit-backdrop-filter: blur(2px);
+  transition:
+    background-color 0.25s,
+    border-color 0.25s;
 }
 
 .card .icon :slotted(svg) {
@@ -62,8 +64,8 @@ const props = defineProps(['name']);
   width: 24px;
   height: 24px;
   transform: translateZ(0);
-  color: #18181B;
-  transition: color .25s;
+  color: #18181b;
+  transition: color 0.25s;
 }
 
 .card h4 {
@@ -74,7 +76,7 @@ const props = defineProps(['name']);
   font-weight: 600;
   font-size: 14px;
   line-height: 2;
-  color: #18181B;
+  color: #18181b;
 }
 
 .card p {
@@ -83,11 +85,14 @@ const props = defineProps(['name']);
   margin: 0;
   font-size: 14px;
   line-height: 1.7;
-  color: #52525B;
+  color: #52525b;
 }
 
 .card:hover {
-  box-shadow: 0 3px 6px rgba(24, 24, 27, 0.05), 0 8px 15px rgba(24, 24, 27, 0.1), 0 0 0 1px rgba(24, 24, 27, 0.15);
+  box-shadow:
+    0 3px 6px rgba(24, 24, 27, 0.05),
+    0 8px 15px rgba(24, 24, 27, 0.1),
+    0 0 0 1px rgba(24, 24, 27, 0.15);
 }
 
 .card:hover .icon::after {
@@ -96,6 +101,6 @@ const props = defineProps(['name']);
 }
 
 .card:hover .icon :slotted(svg) {
-  color: #34D399;
+  color: #34d399;
 }
 </style>

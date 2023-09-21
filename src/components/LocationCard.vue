@@ -1,22 +1,20 @@
 <template>
-    <div class="card">
-        <router-link :to="`/${type}/${result.slug}`">
-            <div class="title">{{ result.county }}</div>
-        </router-link>
-        <div>{{ result.city }}</div>
-        <div>{{ result.street }}</div>
-        <div>{{ result.zipCode }}</div>
-        <div>{{ result.buildingNumber }}</div>
-    </div>
+  <div class="card">
+    <router-link :to="`/${type}/${result.slug}`">
+      <div class="title">{{ result.county }}</div>
+    </router-link>
+    <div>{{ result.city }}</div>
+    <div>{{ result.street }}</div>
+    <div>{{ result.zipCode }}</div>
+    <div>{{ result.buildingNumber }}</div>
+  </div>
 </template>
-  
+
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps } from 'vue'
 
 defineProps({
-    result: Object,
-    type: String
-});
+  result: Object,
+  type: String
+})
 </script>
-
-  
