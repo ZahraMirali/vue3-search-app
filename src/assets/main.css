@@ -14,7 +14,7 @@
 
   --border-width-small: 0.0625rem;
 
-  --color-border-faint : rgb(140 140 140/0.2);
+  --color-border-faint: rgb(140 140 140/0.2);
   --elevation-flat: none;
   --elevation-lined: 0px 0px 0px 1px var(--color-border-faint);
   /*--elevation-raised: var(--elevation-lined),0px 4px 4px var(--color-shadow);*/

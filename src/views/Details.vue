@@ -5,8 +5,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
-
 defineProps({ type: String, slug: String })
 </script>
 

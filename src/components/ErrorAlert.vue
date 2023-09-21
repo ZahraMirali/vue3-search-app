@@ -7,7 +7,6 @@
 
 <script setup>
 import NotExistIcon from './icons/IconNotExist.vue'
-import { defineProps } from 'vue'
 
 defineProps({ message: String })
 </script>

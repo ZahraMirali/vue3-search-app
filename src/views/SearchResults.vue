@@ -9,8 +9,11 @@
           <component :is="getCardComponent(type)" :result="item" :type="type" />
         </li>
       </ul>
-      <router-link v-if="result.data.length < result.totalCount" :to="`/${type}${generateSearchRoute}`"
-        class="see-all-link">
+      <router-link
+        v-if="result.data.length < result.totalCount"
+        :to="`/${type}${generateSearchRoute}`"
+        class="see-all-link"
+      >
         See all {{ type }} results
       </router-link>
     </div>

@@ -18,7 +18,6 @@
 <script setup>
 import MaleIcon from './icons/IconMale.vue'
 import FemaleIcon from './icons/IconFemale.vue'
-import { defineProps } from 'vue'
 
 defineProps({
   result: Object,

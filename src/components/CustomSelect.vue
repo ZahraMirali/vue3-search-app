@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { defineProps, ref } from 'vue'
+import { ref } from 'vue'
 
 const props = defineProps({
   options: {
@@ -32,7 +32,7 @@ const open = ref(false)
 const emit = defineEmits(['input'])
 
 function getSelectedOption() {
-  return props.options.find(item => item.value === props.value) || { label: 'All', value: "all" }
+  return props.options.find((item) => item.value === props.value) || { label: 'All', value: 'all' }
 }
 
 function toggleDropdown() {
