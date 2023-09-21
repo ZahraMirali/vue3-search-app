@@ -2,16 +2,19 @@
     <h1>Welcome to Search App</h1>
     <p>Please use the search bar to find results.</p>
     <div class="grid">
-        <CategoryCard v-for="category of categories" :name="capitalizeFirstLetter(category)">
-            <template v-slot:icon>
-                <component :is="getIconComponent(category)" />
-            </template>
-        </CategoryCard>
+        <RouterLink v-for="category of categories" :to="`/${category}`">
+            <CategoryCard :name="capitalizeFirstLetter(category)">
+                <template v-slot:icon>
+                    <component :is="getIconComponent(category)" />
+                </template>
+            </CategoryCard>
+        </RouterLink>
     </div>
 </template>
   
 <script setup>
 import { inject, } from 'vue';
+import { RouterLink } from 'vue-router'
 import CategoryCard from '../components/CategoryCard.vue';
 import IconPeople from '../components/icons/IconPeople.vue';
 import IconLocation from '../components/icons/IconLocation.vue';
