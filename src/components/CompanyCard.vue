@@ -9,7 +9,7 @@
       </router-link>
 
       <div class="subtitle-primary">{{ result.catchPhrase }}</div>
-        <div class="subtitle-secondary">{{ result.buzzPhrase }}</div>
+      <div class="subtitle-secondary">{{ result.buzzPhrase }}</div>
     </div>
   </div>
 </template>

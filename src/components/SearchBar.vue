@@ -43,8 +43,9 @@ function onInput(event) {
 }
 
 function submitSearchForm() {
-  const searchRoute = `/${selectedCategory.value}${searchTerm.value ? '?keywords=' + searchTerm.value : ''
-    }`
+  const searchRoute = `/${selectedCategory.value}${
+    searchTerm.value ? '?keywords=' + searchTerm.value : ''
+  }`
   router.push(searchRoute)
 }
 </script>

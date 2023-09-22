@@ -11,9 +11,11 @@
           </li>
         </ul>
       </div>
-      <router-link v-if="result.data.length < result.totalCount" :to="`/${type}${generateSearchRoute}`"
-        class="see-all-link">
-        <div class="more-results">See all {{ type }} results</div>
+      <router-link
+        v-if="result.data.length < result.totalCount"
+        :to="`/${type}${generateSearchRoute}`"
+      >
+        <div class="see-all-link">See all {{ type }} results</div>
       </router-link>
     </div>
   </div>
@@ -84,23 +86,12 @@ const getCardComponent = (type) => {
 </script>
 
 <style scoped>
-@media screen and (min-width: 768px) {
-  .search-results {
-    width: 726px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .search-results {
-    width: 100%;
-  }
-}
-
 .search-results {
-  margin: 0 auto 0.5rem;
+  margin: 0 auto 0.5rem auto;
   background-color: var(--color-background);
   box-shadow: var(--elevation-lined);
+  -webkit-box-shadow: var(--elevation-lined);
+  -moz-box-shadow: var(--elevation-lined);
   border-radius: var(--corner-radius-medium);
   overflow: hidden;
 }
@@ -130,7 +121,7 @@ const getCardComponent = (type) => {
   border-bottom: none;
 }
 
-.search-results .more-results {
+.search-results .see-all-link {
   border-top: 0.0625rem solid var(--color-shadow);
   max-width: 100%;
   width: 100%;
@@ -139,11 +130,24 @@ const getCardComponent = (type) => {
   text-align: center;
 }
 
-.search-results .more-results:hover {
+.search-results .see-all-link:hover {
   background-color: var(--color-background-hover);
 }
 
 .search-results a:hover {
   text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .search-results {
+    width: 726px;
+    margin: 0 auto 0.5rem auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search-results {
+    width: 100%;
+  }
 }
 </style>
