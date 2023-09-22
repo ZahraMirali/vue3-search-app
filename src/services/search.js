@@ -34,20 +34,22 @@ export function searchCategory(selectedCategory, searchTerm) {
       if (selectedCategory === 'all') {
         const allResults = {}
 
-        Object.keys(categoriesData).forEach((categoryName) => {
-          const data = filterResults(categoriesData[categoryName], searchTerm, categoryName)
-          allResults[categoryName] = { data: data.slice(0, 3), totalCount: data.length }
+        categories.forEach(({ value, label }) => {
+          const data = filterResults(categoriesData[value], searchTerm, value)
+          allResults[label] = { data: data.slice(0, 3), totalCount: data.length }
         })
 
         resolve(allResults)
       } else {
-        if (!categoriesData[selectedCategory]) {
+        const category = categories.find((item) => item.value === selectedCategory)
+
+        if (!category) {
           reject(new Error(`Category "${selectedCategory}" not found`))
           return
         }
 
         const data = filterResults(categoriesData[selectedCategory], searchTerm, selectedCategory)
-        const results = { [selectedCategory]: { data, totalCount: data.length } }
+        const results = { [category.label]: { data, totalCount: data.length } }
         resolve(results)
       }
     }, 200)
