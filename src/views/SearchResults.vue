@@ -5,16 +5,16 @@
     <div v-for="(result, type) in searchResults" :key="type" class="search-results">
       <div class="search-result-box">
         <h2 class="result-type">{{ result.label }}</h2>
-        <ul class="result-list">
+        <ul class="result-list" v-if="result.data.length">
           <li v-for="item in result.data" :key="item.slug" class="result-item">
             <component :is="getCardComponent(type)" :result="item" :type="type" />
           </li>
         </ul>
+        <div v-else>
+          <p>No results found for this category.</p>
+        </div>
       </div>
-      <router-link
-        v-if="result.data.length < result.totalCount"
-        :to="`/${type}${generateSearchRoute}`"
-      >
+      <router-link v-if="result.data.length < result.totalCount" :to="`/${type}${generateSearchRoute}`">
         <div class="see-all-link">See all {{ type }} results</div>
       </router-link>
     </div>
