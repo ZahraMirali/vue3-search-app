@@ -1,10 +1,9 @@
 import { config } from '@vue/test-utils'
+import { createRouter, createWebHistory } from 'vue-router'
 
-jest.mock('vue-router', () => ({
-  useRoute: jest.fn(),
-  useRouter: jest.fn(() => ({
-    push: () => {}
-  }))
-}))
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [{ path: '/:pathMatch(.*)*', component: { template: '' } }]
+})
 
-config.global.stubs = ['router-link', 'router-view']
+config.global.plugins = [router]

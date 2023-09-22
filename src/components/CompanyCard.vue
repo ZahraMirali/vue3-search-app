@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import CompanyIcon from '@/components/icons/IconCompany.vue'
+import CompanyIcon from './icons/IconCompany.vue'
 
 defineProps({
   result: Object,
