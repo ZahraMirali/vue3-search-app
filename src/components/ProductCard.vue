@@ -1,8 +1,5 @@
 <template>
   <div class="card">
-    <div class="icon">
-      <ProductIcon />
-    </div>
     <div class="details">
       <router-link :to="`/${type}/${result.slug}`">
         <div class="title">{{ result.name }}</div>
@@ -15,7 +12,6 @@
 </template>
 
 <script setup>
-import ProductIcon from './icons/IconProduct.vue'
 
 defineProps({
   result: Object,

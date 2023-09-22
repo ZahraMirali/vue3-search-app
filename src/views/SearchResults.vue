@@ -26,7 +26,7 @@ import ProductCard from '../components/ProductCard.vue'
 import LocationCard from '../components/LocationCard.vue'
 import LoadingSpinner from '../components/LoadingSpinner.vue'
 import ErrorAlert from '../components/ErrorAlert.vue'
-import { searchCategory } from '../services/search'
+import { searchCategory } from '@/services/search'
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 

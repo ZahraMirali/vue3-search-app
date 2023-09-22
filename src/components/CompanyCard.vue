@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="icon">
-      <component :is="CompanyIcon" />
+      <CompanyIcon />
     </div>
     <div class="details">
       <router-link :to="`/${type}/${result.slug}`">
