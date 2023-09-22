@@ -25,12 +25,11 @@ const router = useRouter()
 const route = useRoute()
 
 const categories = inject('categories')
-const selectedCategory = ref(route.params.type || 'all')
+const selectedCategory = ref(route.params.type)
 const searchTerm = ref(route.query.keywords || '')
 
-watch(route, () => {
-  selectedCategory.value = route.params.type || 'all'
-  searchTerm.value = route.query.keywords || ''
+watch(() => route.params.type, () => {
+  selectedCategory.value = route.params.type
 })
 
 function onInput(event) {

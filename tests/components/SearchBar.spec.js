@@ -1,61 +1,40 @@
 import { mount } from '@vue/test-utils'
 import SearchBar from '../../src/components/SearchBar.vue'
+import { useRouter, useRoute } from 'vue-router'
 
-// Mock the dependencies
-const categories = [
-  { label: 'Category 1', value: 'category1' },
-  { label: 'Category 2', value: 'category2' }
-]
+jest.mock('vue-router')
 
-const routerPushMock = jest.fn()
-
-const customSelectStub = {
-  template: '<div class="custom-select"></div>',
-  props: ['options', 'value']
+const route = {
+  params: { type: 'people' },
+  query: { keywords: '' }
 }
 
-const iconSearchStub = {
-  template: '<div class="icon-search"></div>'
-}
+test('updates selectedCategory on CustomSelect input', async () => {
+  useRoute.mockImplementationOnce(() => route)
 
-const routeMock = {
-  params: { type: 'all' },
-  query: { keywords: 'searchTerm' }
-}
+  const push = jest.fn()
+  useRouter.mockImplementationOnce(() => ({ push }))
 
-const useRouterMock = () => ({
-  push: routerPushMock
+  const wrapper = mount(SearchBar)
+  const customSelect = wrapper.findComponent({ name: 'CustomSelect' })
+  await customSelect.vm.$emit('input', 'companies')
+  expect(wrapper.vm.selectedCategory).toBe('companies')
+  expect(push).toHaveBeenCalledTimes(1)
+  expect(push).toHaveBeenCalledWith('/companies')
 })
 
-const useRouteMock = () => routeMock
+test('updates searchTerm and navigates to the correct route on form submit', async () => {
+  useRoute.mockImplementationOnce(() => route)
 
-describe('SearchBar.vue', () => {
-  it('renders the search bar and handles input', async () => {
-    const wrapper = mount(SearchBar, {
-      global: {
-        provide: {
-          categories
-        },
-        stubs: {
-          CustomSelect: customSelectStub,
-          IconSearch: iconSearchStub
-        },
-        mocks: {
-          $router: useRouterMock(),
-          $route: useRouteMock()
-        }
-      }
-    })
+  const push = jest.fn()
+  useRouter.mockImplementationOnce(() => ({ push }))
 
-    const customSelect = wrapper.findComponent(customSelectStub)
-    await customSelect.vm.$emit('input', 'category1')
+  const wrapper = mount(SearchBar)
+  const input = wrapper.find('.search-input')
+  input.setValue('search')
+  await wrapper.find('form').trigger('submit.prevent')
 
-    const searchInput = wrapper.find('.search-input')
-    await searchInput.setValue('newSearchTerm')
-
-    const searchForm = wrapper.find('form')
-    await searchForm.trigger('submit.prevent')
-
-    expect(routerPushMock).toHaveBeenCalledWith('/category1?keywords=newSearchTerm')
-  })
+  expect(wrapper.vm.searchTerm).toBe('search')
+  expect(push).toHaveBeenCalledTimes(1)
+  expect(push).toHaveBeenCalledWith('/people?keywords=search')
 })
