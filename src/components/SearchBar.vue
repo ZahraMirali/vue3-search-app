@@ -39,8 +39,9 @@ function onInput(event) {
 }
 
 function submitSearchForm() {
-  const searchRoute = `/${selectedCategory.value}${searchTerm.value ? '?keywords=' + searchTerm.value : ''
-    }`
+  const searchRoute = `/${selectedCategory.value}${
+    searchTerm.value ? '?keywords=' + searchTerm.value : ''
+  }`
   router.push(searchRoute)
 }
 </script>
@@ -59,32 +60,36 @@ function submitSearchForm() {
 }
 
 .search-box-with-category {
-  width: 280px;
+  margin: 0 auto 0.3125rem;
   display: flex;
   align-items: center;
   background-color: #edf3f8;
   padding: 0;
-  border-top: var(--border-width-small) solid #cccccc;
-  border-bottom: var(--border-width-small) solid #cccccc;
-  border-right: var(--border-width-small) solid #cccccc;
-  border-left: var(--border-width-small) solid #cccccc;
+  border: var(--border-width-small) solid #cccccc;
   border-radius: 0.8rem 2.4rem 2.4rem 0.8rem;
-  //-webkit-border-radius: 0.75rem 2.5rem 2.5rem 0.75rem;
-  //-moz-border-radius: 0.75rem 2.5rem 2.5rem 0.75rem;
+  -webkit-border-radius: 0.8rem 2.4rem 2.4rem 0.8rem;
+  -moz-border-radius: 0.8rem 2.4rem 2.4rem 0.8rem;
+  transition: 0.4s;
+}
+
+.search-box-with-category form {
+  width: 100%;
 }
 
 .search-box {
   display: flex;
+  flex-direction: row;
+  padding: 0;
   border: 0;
   border-radius: 0 2.5rem 2.5rem 0;
   -webkit-border-radius: 0 2.5rem 2.5rem 0;
   -moz-border-radius: 0 2.5rem 2.5rem 0;
-  padding: 0;
   overflow: hidden;
 }
 
 .search-box input[type='text'] {
-  width: 7rem;
+  flex: 1;
+  width: 100%;
   border: 0;
   outline: 0;
   font-size: 1rem;
@@ -120,5 +125,26 @@ function submitSearchForm() {
 .separator {
   color: rgba(0, 0, 0, 0.2);
   font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .search-box-with-category {
+    width: 726px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .search-box-with-category {
+    width: 80%;
+    margin: 0 auto 0 0;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .search-box-with-category {
+    width: 100%;
+    margin: 0 auto 0;
+  }
 }
 </style>

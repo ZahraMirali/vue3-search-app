@@ -11,8 +11,11 @@
           </li>
         </ul>
       </div>
-      <router-link v-if="result.data.length < result.totalCount" :to="`/${type}${generateSearchRoute}`"
-        class="see-all-link">
+      <router-link
+        v-if="result.data.length < result.totalCount"
+        :to="`/${type}${generateSearchRoute}`"
+        class="see-all-link"
+      >
         <div class="more-results">See all {{ type }} results</div>
       </router-link>
     </div>
@@ -84,8 +87,21 @@ const getCardComponent = (type) => {
 </script>
 
 <style scoped>
+@media screen and (min-width: 768px) {
+  .search-results {
+    width: 726px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search-results {
+    width: 100%;
+  }
+}
+
 .search-results {
-  margin-bottom: 0.5rem;
+  margin: 0 auto 0.3125rem;
+
   background-color: var(--color-background);
   box-shadow: var(--elevation-lined);
   border-radius: var(--corner-radius-medium);
@@ -98,18 +114,19 @@ const getCardComponent = (type) => {
 
 .result-type {
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--color-text);
 }
 
 .result-list {
+  margin-top: 1rem;
   list-style: none;
   padding: 0;
 }
 
 .result-item {
-  border-bottom: 1px solid var(--color-shadow);
-  padding: 0.5rem 0;
+  border-bottom: 0.0625rem solid var(--color-shadow);
+  padding: 0.3125rem 0;
 }
 
 .result-item:last-child {
@@ -117,10 +134,10 @@ const getCardComponent = (type) => {
 }
 
 .search-results .more-results {
-  border-top: 1px solid var(--color-shadow);
+  border-top: 0.0625rem solid var(--color-shadow);
   max-width: 100%;
   width: 100%;
-  padding: 0.6rem;
+  padding: 0.375rem;
   transition: 0.4s;
   text-align: center;
 }

@@ -52,7 +52,8 @@ function selectOption(selectedValue) {
 
 <style scoped>
 .custom-select {
-  width: 7.5rem; /* Converted from 120px to rem */
+  width: 7.5rem;
+  min-width: 7.5rem;
   position: relative;
   text-align: left;
   outline: none;
