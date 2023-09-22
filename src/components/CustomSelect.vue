@@ -5,13 +5,15 @@
       <div class="arrow"></div>
     </div>
     <div v-show="open" class="items">
-      <div @click="selectOption('all')">All</div>
-      <div v-for="option of options" :key="option" @click="selectOption(option.value)">
+      <div @click="selectOption('all')" data-test="option-all">All</div>
+      <div v-for="option of options" :key="option.value" @click="selectOption(option.value)"
+        :data-test="`option-${option.value}`">
         {{ option.label }}
       </div>
     </div>
   </div>
 </template>
+
 
 <script setup>
 import { ref } from 'vue'

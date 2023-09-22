@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="icon">
-      <component :is=ProductIcon />
+      <ProductIcon />
     </div>
     <div class="details">
       <router-link :to="`/${type}/${result.slug}`">
@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import ProductIcon from '@/components/icons/IconProduct.vue'
+import ProductIcon from './icons/IconProduct.vue'
 
 defineProps({
   result: Object,
@@ -23,7 +23,7 @@ defineProps({
 })
 </script>
 
-<style>
+<style scoped>
 .details .price {
   font-size: 1rem;
   font-weight: bold;

@@ -2,19 +2,18 @@
   <h1>Welcome to Search App</h1>
   <p>Please use the search bar to find results.</p>
   <div class="grid">
-    <RouterLink v-for="category of categories" :to="`/${category.value}`">
+    <router-link v-for="category of categories" :to="`/${category.value}`">
       <CategoryCard :name="category.label" :description="category.description">
         <template v-slot:icon>
           <component :is="getIconComponent(category.value)" />
         </template>
       </CategoryCard>
-    </RouterLink>
+    </router-link>
   </div>
 </template>
 
 <script setup>
 import { inject } from 'vue'
-import { RouterLink } from 'vue-router'
 import CategoryCard from '../components/CategoryCard.vue'
 import IconPeople from '../components/icons/IconPeople.vue'
 import IconLocation from '../components/icons/IconLocation.vue'

@@ -20,13 +20,13 @@
 </template>
 
 <script setup>
-import PersonCard from '../components/PeopleCard.vue'
+import PeopleCard from '../components/PeopleCard.vue'
 import CompanyCard from '../components/CompanyCard.vue'
 import ProductCard from '../components/ProductCard.vue'
 import LocationCard from '../components/LocationCard.vue'
 import LoadingSpinner from '../components/LoadingSpinner.vue'
 import ErrorAlert from '../components/ErrorAlert.vue'
-import { searchCategory } from '@/services/search'
+import { searchCategory } from '../services/search'
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -70,7 +70,7 @@ watch(route, () => {
 const getCardComponent = (type) => {
   switch (type) {
     case 'people':
-      return PersonCard
+      return PeopleCard
     case 'companies':
       return CompanyCard
     case 'products':

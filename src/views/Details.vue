@@ -7,5 +7,3 @@
 <script setup>
 defineProps({ type: String, slug: String })
 </script>
-
-<style scoped></style>

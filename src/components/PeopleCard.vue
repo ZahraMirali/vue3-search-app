@@ -22,5 +22,3 @@ defineProps({
   type: String
 })
 </script>
-
-<style></style>
