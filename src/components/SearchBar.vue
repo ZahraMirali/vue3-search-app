@@ -55,6 +55,7 @@ function submitSearchForm() {
   width: 100%;
   background-color: white;
   position: fixed;
+  z-index: 3;
 }
 
 .search-box-with-category {

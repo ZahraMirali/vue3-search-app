@@ -7,7 +7,7 @@
       <router-link :to="`/${type}/${result.slug}`">
         <div class="title">{{ result.county }}</div>
         <div class="subtitle-primary">
-          {{ result.city }}, {{ result.street }} {{ result.buildingNumber }}
+          {{ `${result.city}, ${result.street} ${result.buildingNumber}` }}
         </div>
         <div class="subtitle-secondary">Zip Code: {{ result.zipCode }}</div>
       </router-link>

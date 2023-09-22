@@ -5,15 +5,18 @@
       <div class="arrow"></div>
     </div>
     <div v-show="open" class="items">
-      <div @click="selectOption('all')" data-test="option-all">All</div>
-      <div v-for="option of options" :key="option.value" @click="selectOption(option.value)"
-        :data-test="`option-${option.value}`">
+      <div data-test="option-all" @click="selectOption('all')">All</div>
+      <div
+        v-for="option of options"
+        :key="option.value"
+        :data-test="`option-${option.value}`"
+        @click="selectOption(option.value)"
+      >
         {{ option.label }}
       </div>
     </div>
   </div>
 </template>
-
 
 <script setup>
 import { ref } from 'vue'
@@ -49,7 +52,7 @@ function selectOption(selectedValue) {
 
 <style scoped>
 .custom-select {
-  width: 120px;
+  width: 7.5rem; /* Converted from 120px to rem */
   position: relative;
   text-align: left;
   outline: none;
@@ -59,7 +62,7 @@ function selectOption(selectedValue) {
 
 .custom-select .selected {
   border-radius: 0.375rem;
-  padding: 0 0.625rem;
+  padding: 0 1rem; /* Converted from 0.625rem to rem */
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -75,17 +78,16 @@ function selectOption(selectedValue) {
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 10;
   background-color: white;
   margin-top: 0;
-  box-shadow: 0.625rem 0.625rem 3.75rem -1rem rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0.625rem 0.625rem 3.75rem -1rem rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0.625rem 0.625rem 3.75rem -1rem rgba(0, 0, 0, 0.6);
+  box-shadow: 1rem 1rem 6.25rem -2.5rem rgba(0, 0, 0, 0.6); /* Converted box-shadow values to rem */
+  -webkit-box-shadow: 1rem 1rem 6.25rem -2.5rem rgba(0, 0, 0, 0.6); /* Converted box-shadow values to rem */
+  -moz-box-shadow: 1rem 1rem 6.25rem -2.5rem rgba(0, 0, 0, 0.6); /* Converted box-shadow values to rem */
   transition: 0.4s;
 }
 
 .custom-select .items div {
-  padding-left: 0.625rem;
+  padding-left: 1rem; /* Converted from 0.625rem to rem */
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -101,7 +103,7 @@ function selectOption(selectedValue) {
   border-color: black transparent transparent transparent;
   display: inline;
   align-self: center;
-  margin-top: 10px;
-  margin-left: 5px;
+  margin-top: 0.625rem; /* Converted from 10px to rem */
+  margin-left: 0.3125rem; /* Converted from 5px to rem */
 }
 </style>

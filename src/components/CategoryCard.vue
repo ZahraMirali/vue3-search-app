@@ -16,11 +16,11 @@ defineProps(['name', 'description'])
 .category-card {
   background-color: #fafafa;
   box-shadow:
-    0 3px 6px rgba(24, 24, 27, 0.02),
-    0 2px 7px rgba(24, 24, 27, 0.04),
-    0 0 0 1px rgba(24, 24, 27, 0.08);
-  padding: 56px 16px 16px 16px;
-  border-radius: 15px;
+    0 0.1875rem 0.375rem rgba(24, 24, 27, 0.02),
+    0 0.125rem 0.4375rem rgba(24, 24, 27, 0.04),
+    0 0 0 0.0625rem rgba(24, 24, 27, 0.08);
+  padding: 3.5rem 1rem 1rem 1rem;
+  border-radius: 0.9375rem;
   cursor: pointer;
   position: relative;
   transition: box-shadow 0.25s;
@@ -30,26 +30,25 @@ defineProps(['name', 'description'])
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   background-color: transparent;
 }
 
 .category-card .icon {
-  z-index: 2;
   position: relative;
   display: table;
-  padding: 8px;
+  padding: 0.5rem;
 }
 
 .category-card .icon::after {
   content: '';
   position: absolute;
-  inset: 5px;
+  inset: 0.3125rem;
   border-radius: 50%;
   background-color: rgba(24, 24, 27, 0.04);
-  border: 1px solid rgba(24, 24, 27, 0.34);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  border: 0.0625rem solid rgba(24, 24, 27, 0.34);
+  backdrop-filter: blur(0.125rem);
+  -webkit-backdrop-filter: blur(0.125rem);
   transition:
     background-color 0.25s,
     border-color 0.25s;
@@ -59,38 +58,36 @@ defineProps(['name', 'description'])
   position: relative;
   z-index: 1;
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   transform: translateZ(0);
   color: #18181b;
   transition: color 0.25s;
 }
 
 .category-card h4 {
-  z-index: 2;
   position: relative;
-  margin: 12px 0 4px 0;
+  margin: 0.75rem 0 0.25rem 0;
   font-family: inherit;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 0.875rem;
+  line-height: 1.25;
   color: #18181b;
 }
 
 .category-card p {
-  z-index: 2;
   position: relative;
   margin: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.7;
   color: #52525b;
 }
 
 .category-card:hover {
   box-shadow:
-    0 3px 6px rgba(24, 24, 27, 0.05),
-    0 8px 15px rgba(24, 24, 27, 0.1),
-    0 0 0 1px rgba(24, 24, 27, 0.15);
+    0 0.1875rem 0.375rem rgba(24, 24, 27, 0.05),
+    0 0.5rem 0.9375rem rgba(24, 24, 27, 0.1),
+    0 0 0 0.0625rem rgba(24, 24, 27, 0.15);
 }
 
 .category-card:hover .icon::after {

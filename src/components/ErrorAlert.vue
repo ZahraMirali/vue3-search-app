@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="error-message">
     <NotExistIcon />
     <p>{{ message }}</p>
   </div>
@@ -12,9 +12,13 @@ defineProps({ message: String })
 </script>
 
 <style scoped>
-div {
+.error-message {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.error-message p {
+  color: var(--color-text-gray);
 }
 </style>

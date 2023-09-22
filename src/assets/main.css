@@ -23,14 +23,12 @@
   --voyager-elevation-text-theater: 0 0 2px var(--color-shadow);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
+/*--------------------------------------*/
 html {
   font-size: 16px;
   background: var(--color-background-canvas);
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -40,19 +38,22 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 #app {
+
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  color: var(--color-text);
+header{
+  z-index: 1000;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 a,
@@ -68,7 +69,7 @@ a:hover {
 }
 
 
-/*--Components styles-----------------*/
+/*--Start: Card Components styles-----------------*/
 .card {
   display: flex;
   flex-direction: row;
@@ -106,3 +107,4 @@ a:hover {
   font-size: 0.8rem;
   color: var(--color-text-gray);
 }
+/*--End: Card Components styles-----------------*/

@@ -6,19 +6,19 @@
 
 <style scoped>
 .loading-spinner {
-  margin: 30px auto auto;
-  width: 80px;
-  height: 80px;
+  margin: 1.875rem auto auto;
+  width: 5rem;
+  height: 5rem;
 }
 
 .spinner::after {
   content: ' ';
   display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5rem;
   border-radius: 50%;
-  border: 6px solid var(--primary);
+  border: 0.375rem solid var(--primary);
   border-color: var(--primary) transparent var(--primary) transparent;
   animation: spin 1.2s linear infinite;
 }
