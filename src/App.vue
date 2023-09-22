@@ -31,10 +31,7 @@ loadCategories()
 provide('categories', categories)
 </script>
 
-<style>
-header {
-}
-
+<style scoped>
 main {
   padding: 100px 20px 20px;
 }
