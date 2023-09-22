@@ -87,7 +87,7 @@ const getCardComponent = (type) => {
 
 <style scoped>
 .search-results {
-  margin: 0 auto 0.5rem auto;
+  margin-bottom: 0.5rem;
   background-color: var(--color-background);
   box-shadow: var(--elevation-lined);
   -webkit-box-shadow: var(--elevation-lined);
@@ -136,18 +136,5 @@ const getCardComponent = (type) => {
 
 .search-results a:hover {
   text-decoration: none;
-}
-
-@media screen and (min-width: 768px) {
-  .search-results {
-    width: 726px;
-    margin: 0 auto 0.5rem auto;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .search-results {
-    width: 100%;
-  }
 }
 </style>
