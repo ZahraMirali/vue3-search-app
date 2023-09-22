@@ -14,24 +14,15 @@ defineProps(['name', 'description'])
 
 <style scoped>
 .category-card {
-  background-color: #fafafa;
-  box-shadow:
-    0 0.1875rem 0.375rem rgba(24, 24, 27, 0.02),
-    0 0.125rem 0.4375rem rgba(24, 24, 27, 0.04),
-    0 0 0 0.0625rem rgba(24, 24, 27, 0.08);
-  padding: 3.5rem 1rem 1rem 1rem;
+  background-color: var(--color-background);
+  box-shadow: var(--elevation-raised);
+  -webkit-box-shadow: var(--elevation-raised);
+  -moz-box-shadow: var(--elevation-raised);
+  padding: 1rem;
   border-radius: 0.9375rem;
   cursor: pointer;
   position: relative;
   transition: box-shadow 0.25s;
-}
-
-.category-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 0.9375rem;
-  background-color: transparent;
 }
 
 .category-card .icon {
@@ -61,7 +52,6 @@ defineProps(['name', 'description'])
   width: 1.5rem;
   height: 1.5rem;
   transform: translateZ(0);
-  color: #18181b;
   transition: color 0.25s;
 }
 
@@ -69,33 +59,34 @@ defineProps(['name', 'description'])
   position: relative;
   margin: 0.75rem 0 0.25rem 0;
   font-family: inherit;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 0.875rem;
   line-height: 1.25;
-  color: #18181b;
 }
 
 .category-card p {
   position: relative;
   margin: 0;
   font-size: 0.875rem;
-  line-height: 1.7;
-  color: #52525b;
+  color: var(--color-secondary-text);
 }
 
 .category-card:hover {
-  box-shadow:
-    0 0.1875rem 0.375rem rgba(24, 24, 27, 0.05),
-    0 0.5rem 0.9375rem rgba(24, 24, 27, 0.1),
-    0 0 0 0.0625rem rgba(24, 24, 27, 0.15);
+  box-shadow: var(--box-shadow-hover);
+  -webkit-box-shadow: var(--box-shadow-hover);
+  -moz-box-shadow: var(--box-shadow-hover);
 }
 
 .category-card:hover .icon::after {
-  background-color: rgba(52, 211, 153, 0.1);
-  border-color: rgba(52, 211, 153, 0.2);
+  background-color: var(--color-pramary);
+  border-color: var(--color-pramary-light);
 }
 
 .category-card:hover .icon :slotted(svg) {
-  color: #34d399;
+  color: var(--color-pramary-dark);
+}
+
+.grid a:hover{
+  text-decoration: none !important;
 }
 </style>

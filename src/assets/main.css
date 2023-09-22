@@ -1,12 +1,12 @@
 /*--Start: Variables-------------------*/
 :root {
-  --primary: #00b797;
-  --secondary-light: #dddddd;
-  --secondary: #999999;
+  --color-pramary: rgba(52, 211, 153, 0.1);
+  --color-pramary-light: rgba(52, 211, 153, 0.2);
+  --color-pramary-dark: rgba(52, 211, 153, 0.8);
+  --color-primary-text: #212121;
+  --color-secondary-text: #757575;
   --color-background-canvas: #f4f2ee;
   --color-background: #ffffff;
-  --color-text: rgb(0 0 0/0.9);
-  --color-text-gray-dark: rgb(0 0 0/0.6);
   --color-shadow: rgb(140 140 140/0.2);
   --color-background-hover: rgba(0, 0, 0, 0.08);
 
@@ -18,8 +18,11 @@
   --elevation-flat: none;
   --elevation-lined: 0px 0px 0px 1px var(--color-shadow);
   --elevation-raised: var(--elevation-lined), 0px 4px 4px var(--color-shadow);
-  --voyager-elevation-text-theater: 0 0 2px var(--color-shadow);
+
+  --box-shadow-hover: 0 0.1875rem 0.375rem rgba(24, 24, 27, 0.05),
+    0 0.5rem 0.9375rem rgba(24, 24, 27, 0.1), 0 0 0 0.0625rem rgba(24, 24, 27, 0.15);
 }
+
 /*--End: Variables---------------------*/
 
 /*--Start: Main styles-----------------*/
@@ -56,21 +59,18 @@ main {
   padding: 0;
   border: none;
 }
+
 /*--End: Main styles--------------------*/
 
 /*--Start: General styles---------------*/
 a,
 a:visited,
 a:hover {
-  color: var(--color-text);
-  text-decoration-color: var(--color-text);
+  color: var(--color-primary-text);
+  text-decoration-color: var(--color-primary-text);
   text-decoration: none;
 }
 /*--End: General styles-----------------*/
-
-a:hover {
-  text-decoration: underline;
-}
 
 /*--Start: Card Components styles (common styles)-----------------*/
 .card {
@@ -94,6 +94,7 @@ a:hover {
 .card .details .title {
   font-size: 1rem;
   font-weight: bold;
+  color: var(--color-primary-text);
 }
 
 .card .details .title:hover {
@@ -102,13 +103,13 @@ a:hover {
 
 .card .details .subtitle-primary {
   font-size: 0.8rem;
-  color: var(--color-text);
+  color: var(--color-primary-text);
   text-decoration: none;
 }
 
 .card .details .subtitle-secondary {
   font-size: 0.8rem;
-  color: var(--color-text-gray-dark);
+  color: var(--color-secondary-text);
 }
 /*--End: Card Components styles (common styles)--------------------*/
 
@@ -127,4 +128,5 @@ a:hover {
     padding-right: 20px;
   }
 }
+
 /*--End: Responsive--------------------------*/

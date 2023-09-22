@@ -2,10 +2,15 @@
   <LoadingSpinner v-if="loading" />
   <ErrorAlert v-else-if="error" :message="error" />
   <div v-else>
-    <div v-for="(result, type) in searchResults" :key="type" class="search-results" data-test="search-results">
+    <div
+      v-for="(result, type) in searchResults"
+      :key="type"
+      class="search-results"
+      data-test="search-results"
+    >
       <div class="search-result-box">
         <h2 class="result-type">{{ result.label }}</h2>
-        <ul class="result-list" v-if="result.data.length">
+        <ul v-if="result.data.length" class="result-list">
           <li v-for="item in result.data" :key="item.slug" class="result-item">
             <component :is="getCardComponent(type)" :result="item" :type="type" />
           </li>
@@ -14,7 +19,10 @@
           <p>No results found for this category.</p>
         </div>
       </div>
-      <router-link v-if="result.data.length < result.totalCount" :to="`/${type}${generateSearchRoute}`">
+      <router-link
+        v-if="result.data.length < result.totalCount"
+        :to="`/${type}${generateSearchRoute}`"
+      >
         <div class="see-all-link">See all {{ type }} results</div>
       </router-link>
     </div>
@@ -28,7 +36,7 @@ import ProductCard from '../components/ProductCard.vue'
 import LocationCard from '../components/LocationCard.vue'
 import LoadingSpinner from '../components/LoadingSpinner.vue'
 import ErrorAlert from '../components/ErrorAlert.vue'
-import { searchCategory } from '../services/search'
+import { searchCategory } from '@/services/search'
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -103,7 +111,7 @@ const getCardComponent = (type) => {
 .result-type {
   font-weight: bold;
   font-size: 1.4rem;
-  color: var(--color-text);
+  color: var(--color-primary-text);
 }
 
 .result-list {
@@ -128,6 +136,7 @@ const getCardComponent = (type) => {
   padding: 0.375rem;
   transition: 0.4s;
   text-align: center;
+  color: var(--color-secondary-text);
 }
 
 .search-results .see-all-link:hover {

@@ -51,12 +51,12 @@ const getIconComponent = (type) => {
 
 h1 {
   font-size: 1.5rem;
-  color: var(--primary);
+  color: var(--color-primary-text);
 }
 
 p {
   font-size: 1rem;
-  color: var(--secondary);
+  color: var(--color-secondary-text);
 }
 
 @media screen and (min-width: 420px) {

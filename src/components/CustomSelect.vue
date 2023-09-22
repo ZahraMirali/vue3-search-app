@@ -79,11 +79,8 @@ function selectOption(selectedValue) {
   background-color: white;
   margin-top: 0;
   box-shadow: 1rem 1rem 6.25rem -2.5rem rgba(0, 0, 0, 0.6);
-  /* Converted box-shadow values to rem */
   -webkit-box-shadow: 1rem 1rem 6.25rem -2.5rem rgba(0, 0, 0, 0.6);
-  /* Converted box-shadow values to rem */
   -moz-box-shadow: 1rem 1rem 6.25rem -2.5rem rgba(0, 0, 0, 0.6);
-  /* Converted box-shadow values to rem */
   transition: 0.4s;
 }
 
