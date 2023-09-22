@@ -2,7 +2,7 @@
   <h1>Welcome to Search App</h1>
   <p>Please use the search bar to find results.</p>
   <div class="grid">
-    <router-link v-for="category of categories" :to="`/${category.value}`">
+    <router-link v-for="category of categories" :key="category.value" :to="`/${category.value}`">
       <CategoryCard :description="category.description" :name="category.label">
         <template v-slot:icon>
           <component :is="getIconComponent(category.value)" />
@@ -40,18 +40,34 @@ const getIconComponent = (type) => {
 
 <style scoped>
 .grid {
+  width: 100%;
+  margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(2, 15rem);
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   position: relative;
   z-index: 1;
+  transition: 0.4s;
 }
 
 h1 {
   font-size: 1.5rem;
+  color: var(--primary);
 }
 
 p {
   font-size: 1rem;
+  color: var(--secondary);
+}
+
+@media screen and (min-width: 421px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 </style>
