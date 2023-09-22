@@ -105,3 +105,16 @@ a:hover {
 }
 
 /*--End: Card Components styles-----------------*/
+
+@media screen and (min-width: 768px) {
+  main {
+    width: 726px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    width: 100%;
+  }
+}

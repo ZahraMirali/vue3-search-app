@@ -3,7 +3,7 @@
   <p>Please use the search bar to find results.</p>
   <div class="grid">
     <router-link v-for="category of categories" :to="`/${category.value}`">
-      <CategoryCard :name="category.label" :description="category.description">
+      <CategoryCard :description="category.description" :name="category.label">
         <template v-slot:icon>
           <component :is="getIconComponent(category.value)" />
         </template>
