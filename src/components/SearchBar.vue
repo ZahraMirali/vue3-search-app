@@ -27,13 +27,13 @@ const router = useRouter()
 const route = useRoute()
 
 const categories = inject('categories')
-const selectedCategory = ref(route.params.type)
+const selectedCategory = ref(route.params.type || 'all')
 const searchTerm = ref(route.query.keywords || '')
 
 watch(
   () => route.params.type,
   () => {
-    selectedCategory.value = route.params.type
+    selectedCategory.value = route.params.type || 'all'
   }
 )
 
@@ -43,9 +43,8 @@ function onInput(event) {
 }
 
 function submitSearchForm() {
-  const searchRoute = `/${selectedCategory.value}${
-    searchTerm.value ? '?keywords=' + searchTerm.value : ''
-  }`
+  const searchRoute = `/${selectedCategory.value}${searchTerm.value ? '?keywords=' + searchTerm.value : ''
+    }`
   router.push(searchRoute)
 }
 </script>

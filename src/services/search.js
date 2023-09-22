@@ -44,7 +44,7 @@ export function searchCategory(selectedCategory, searchTerm) {
         const category = categories.find((item) => item.value === selectedCategory)
 
         if (!category) {
-          reject(new Error(`Category "${selectedCategory}" not found`))
+          reject(new Error(`Category ${selectedCategory} not found`))
           return
         }
 

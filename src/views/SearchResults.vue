@@ -11,11 +11,8 @@
           </li>
         </ul>
       </div>
-      <router-link
-        v-if="result.data.length < result.totalCount"
-        :to="`/${type}${generateSearchRoute}`"
-        class="see-all-link"
-      >
+      <router-link v-if="result.data.length < result.totalCount" :to="`/${type}${generateSearchRoute}`"
+        class="see-all-link">
         <div class="more-results">See all {{ type }} results</div>
       </router-link>
     </div>
@@ -29,7 +26,7 @@ import ProductCard from '../components/ProductCard.vue'
 import LocationCard from '../components/LocationCard.vue'
 import LoadingSpinner from '../components/LoadingSpinner.vue'
 import ErrorAlert from '../components/ErrorAlert.vue'
-import { searchCategory } from '@/services/search'
+import { searchCategory } from '../services/search'
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
