@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { provide, ref } from 'vue'
+import { onMounted, provide, ref } from 'vue'
 import SearchBar from './components/SearchBar.vue'
 import LoadingSpinner from './components/LoadingSpinner.vue'
 import { getAllCategories } from './services/search'
@@ -26,7 +26,9 @@ async function loadCategories() {
   loading.value = false
 }
 
-loadCategories()
+onMounted(() => {
+  loadCategories()
+})
 
 provide('categories', categories)
 </script>

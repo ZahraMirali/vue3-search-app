@@ -20,14 +20,17 @@ describe('LocationCard', () => {
       }
     })
 
+    const locationCounty = wrapper.find('[data-test="location-county"]')
+    const locationAddress = wrapper.find('[data-test="location-address"]')
+    const locationZipCode = wrapper.find('[data-test="location-zip-code"]')
     const routerLink = wrapper.findComponent({ name: 'RouterLink' })
+
     expect(routerLink.exists()).toBe(true)
     expect(routerLink.props().to).toBe(`/${type}/${result.slug}`)
-
-    expect(wrapper.find('.title').text()).toBe(result.county)
-    expect(wrapper.text()).toContain(result.city)
-    expect(wrapper.text()).toContain(result.street)
-    expect(wrapper.text()).toContain(result.zipCode)
-    expect(wrapper.text()).toContain(result.buildingNumber)
+    expect(locationCounty.text()).toBe(result.county)
+    expect(locationAddress.text()).toContain(result.city)
+    expect(locationAddress.text()).toContain(result.street)
+    expect(locationAddress.text()).toContain(result.buildingNumber)
+    expect(locationZipCode.text()).toContain(result.zipCode)
   })
 })

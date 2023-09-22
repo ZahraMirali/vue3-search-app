@@ -20,12 +20,15 @@ describe('PeopleCard', () => {
       }
     })
 
+    const peopleName = wrapper.find('[data-test="people-name"]')
+    const peopleJobTitle = wrapper.find('[data-test="people-job-title"]')
+    const peopleBio = wrapper.find('[data-test="people-bio"]')
     const routerLink = wrapper.findComponent({ name: 'RouterLink' })
+
     expect(routerLink.exists()).toBe(true)
     expect(routerLink.props().to).toBe(`/${type}/${result.slug}`)
-
-    expect(wrapper.find('.title').text()).toBe(`${result.firstName} ${result.lastName}`)
-    expect(wrapper.find('.subtitle-primary').text()).toBe(result.jobTitle)
-    expect(wrapper.find('.subtitle-secondary').text()).toBe(result.bio)
+    expect(peopleName.text()).toBe(`${result.firstName} ${result.lastName}`)
+    expect(peopleJobTitle.text()).toBe(result.jobTitle)
+    expect(peopleBio.text()).toBe(result.bio)
   })
 })

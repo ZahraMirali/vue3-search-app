@@ -3,8 +3,8 @@ import CategoryCard from '../../src/components/CategoryCard.vue'
 
 describe('CategoryCard', () => {
   it('renders the name and description props', () => {
-    const name = 'Test Card'
-    const description = 'This is a test card description'
+    const name = 'Category 1'
+    const description = 'This is a category description'
 
     const wrapper = mount(CategoryCard, {
       props: {
@@ -13,12 +13,14 @@ describe('CategoryCard', () => {
       }
     })
 
-    expect(wrapper.find('h4').text()).toBe(name)
-    expect(wrapper.find('p').text()).toBe(description)
+    expect(wrapper.find('[data-test="category-name"]').text()).toBe('Category 1')
+    expect(wrapper.find('[data-test="category-description"]').text()).toBe(
+      'This is a category description'
+    )
   })
 
   it('renders the slot content', () => {
-    const slotContent = '<div class="custom-icon">Custom Icon</div>'
+    const slotContent = '<div data-test="custom-icon">Custom Icon</div>'
 
     const wrapper = mount(CategoryCard, {
       slots: {
@@ -26,7 +28,7 @@ describe('CategoryCard', () => {
       }
     })
 
-    expect(wrapper.find('.custom-icon').exists()).toBe(true)
-    expect(wrapper.find('.custom-icon').text()).toBe('Custom Icon')
+    expect(wrapper.find('[data-test="custom-icon"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="custom-icon"]').text()).toBe('Custom Icon')
   })
 })

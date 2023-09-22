@@ -14,7 +14,7 @@ describe('SearchResults', () => {
 
     expect(wrapper.findComponent({ name: 'LoadingSpinner' }).exists()).toBe(true)
     expect(wrapper.findComponent({ name: 'ErrorAlert' }).exists()).toBe(false)
-    expect(wrapper.find('.search-results').exists()).toBe(false)
+    expect(wrapper.find('[data-test="search-results"]').exists()).toBe(false)
   })
 
   it('displays error alert when error is not null', async () => {
@@ -25,7 +25,7 @@ describe('SearchResults', () => {
 
     expect(wrapper.findComponent({ name: 'LoadingSpinner' }).exists()).toBe(false)
     expect(wrapper.findComponent({ name: 'ErrorAlert' }).exists()).toBe(true)
-    expect(wrapper.find('.search-results').exists()).toBe(false)
+    expect(wrapper.find('[data-test="search-results"]').exists()).toBe(false)
   })
 
   it('displays search results when loading and error are false', async () => {
@@ -36,6 +36,6 @@ describe('SearchResults', () => {
 
     expect(wrapper.findComponent({ name: 'LoadingSpinner' }).exists()).toBe(false)
     expect(wrapper.findComponent({ name: 'ErrorAlert' }).exists()).toBe(false)
-    expect(wrapper.findAll('.search-results')).toHaveLength(2)
+    expect(wrapper.findAll('[data-test="search-results"]')).toHaveLength(2)
   })
 })

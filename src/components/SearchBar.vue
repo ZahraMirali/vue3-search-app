@@ -6,7 +6,7 @@
         <span class="separator">|</span>
         <form @submit.prevent="submitSearchForm">
           <div class="search-box">
-            <input v-model="searchTerm" class="search-input" placeholder="Search..." type="text" />
+            <input v-model="searchTerm" class="search-input" placeholder="Search..." type="text"  data-test="search-input"/>
             <button aria-label="Search" class="search-button" title="Search" type="submit">
               <IconSearch />
             </button>
@@ -61,10 +61,6 @@ function submitSearchForm() {
   background-color: white;
   position: fixed;
   z-index: 3;
-}
-
-.search-bar-container {
-  margin: 0 auto;
 }
 
 .search-box-with-category {
@@ -134,17 +130,5 @@ function submitSearchForm() {
 .separator {
   color: rgba(0, 0, 0, 0.2);
   font-size: 1.4rem;
-}
-
-@media screen and (min-width: 768px) {
-  .search-bar-container {
-    width: 726px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .search-bar-container {
-    width: 100%;
-  }
 }
 </style>
