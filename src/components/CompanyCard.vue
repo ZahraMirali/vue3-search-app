@@ -1,14 +1,21 @@
 <template>
   <div class="card">
-    <router-link :to="`/${type}/${result.slug}`">
-      <div class="title">{{ result.name }}</div>
-    </router-link>
-    <div>{{ result.catchPhrase }}</div>
-    <div>{{ result.buzzPhrase }}</div>
+    <div class="icon">
+      <component :is="CompanyIcon" />
+    </div>
+    <div class="details">
+      <router-link :to="`/${type}/${result.slug}`">
+        <div class="title">{{ result.name }}</div>
+        <div class="subtitle-primary">{{ result.catchPhrase }}</div>
+        <div class="subtitle-secondary">{{ result.buzzPhrase }}</div>
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script setup>
+import CompanyIcon from '@/components/icons/IconCompany.vue'
+
 defineProps({
   result: Object,
   type: String
