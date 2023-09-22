@@ -85,7 +85,7 @@ const getCardComponent = (type) => {
 
 <style scoped>
 .search-results {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   background-color: var(--color-background);
   box-shadow: var(--elevation-lined);
   border-radius: var(--corner-radius-medium);

@@ -29,11 +29,6 @@
 }
 
 html {
-  /*background-image: url("banner-bg.jpg");*/
-  /*background-attachment: fixed;*/
-  /*background-repeat: no-repeat;*/
-  /*background-size: cover;*/
-
   font-size: 16px;
   background: var(--color-background-canvas);
 }
