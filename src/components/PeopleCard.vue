@@ -23,42 +23,4 @@ defineProps({
 })
 </script>
 
-<style>
-.card {
-  display: flex;
-  flex-direction: row;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: var(--corner-radius-medium);
-  transition: 0.4s;
-}
-
-.card .details {
-  width: 100%;
-  margin-left: 6px;
-}
-
-.card .details a:hover {
-  text-decoration: none;
-}
-
-.card .details .title {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.card .details:hover .title {
-  text-decoration: underline;
-}
-
-.card .details .subtitle-primary {
-  font-size: 0.8rem;
-  color: var(--color-text);
-  text-decoration: none;
-}
-
-.card .details .subtitle-secondary {
-  font-size: 0.8rem;
-  color: var(--color-text-gray);
-}
-</style>
+<style></style>
