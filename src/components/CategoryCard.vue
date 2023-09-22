@@ -3,8 +3,8 @@
     <span class="icon">
       <slot name="icon"></slot>
     </span>
-    <h4>{{ name }}</h4>
-    <p>{{ description }}</p>
+    <h4 data-test="category-name">{{ name }}</h4>
+    <p data-test="category-description">{{ description }}</p>
   </div>
 </template>
 

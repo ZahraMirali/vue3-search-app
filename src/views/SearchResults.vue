@@ -2,7 +2,7 @@
   <LoadingSpinner v-if="loading" />
   <ErrorAlert v-else-if="error" :message="error" />
   <div v-else>
-    <div v-for="(result, type) in searchResults" :key="type" class="search-results">
+    <div v-for="(result, type) in searchResults" :key="type" class="search-results" data-test="search-results">
       <div class="search-result-box">
         <h2 class="result-type">{{ result.label }}</h2>
         <ul class="result-list" v-if="result.data.length">

@@ -18,12 +18,15 @@ describe('CompanyCard', () => {
       }
     })
 
+    const companyCatchPhrase = wrapper.find('[data-test="company-catch-phrase"]')
+    const companyBuzzPhrase = wrapper.find('[data-test="company-buzz-phrase"]')
+    const companyTitle = wrapper.find('[data-test="company-title"]')
     const routerLink = wrapper.findComponent({ name: 'router-link' })
+
     expect(routerLink.exists()).toBe(true)
     expect(routerLink.props().to).toBe(`/${type}/${result.slug}`)
-
-    expect(wrapper.find('.title').text()).toBe(result.name)
-    expect(wrapper.text()).toContain(result.catchPhrase)
-    expect(wrapper.text()).toContain(result.buzzPhrase)
+    expect(companyTitle.text()).toBe(result.name)
+    expect(companyCatchPhrase.text()).toBe(result.catchPhrase)
+    expect(companyBuzzPhrase.text()).toBe(result.buzzPhrase)
   })
 })

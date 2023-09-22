@@ -5,7 +5,7 @@
       <span class="separator">|</span>
       <form @submit.prevent="submitSearchForm">
         <div class="search-box">
-          <input v-model="searchTerm" class="search-input" placeholder="Search..." type="text" />
+          <input v-model="searchTerm" class="search-input" placeholder="Search..." type="text" data-test="search-input" />
           <button aria-label="Search" class="search-button" title="Search" type="submit">
             <IconSearch />
           </button>
@@ -41,9 +41,8 @@ function onInput(event) {
 }
 
 function submitSearchForm() {
-  const searchRoute = `/${selectedCategory.value}${
-    searchTerm.value ? '?keywords=' + searchTerm.value : ''
-  }`
+  const searchRoute = `/${selectedCategory.value}${searchTerm.value ? '?keywords=' + searchTerm.value : ''
+    }`
   router.push(searchRoute)
 }
 </script>

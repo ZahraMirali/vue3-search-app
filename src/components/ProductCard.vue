@@ -2,11 +2,11 @@
   <div class="card">
     <div class="details">
       <router-link :to="`/${type}/${result.slug}`">
-        <div class="title">{{ result.name }}</div>
+        <div class="title" data-test="product-name">{{ result.name }}</div>
       </router-link>
-      <div class="subtitle-primary">{{ result.description }}</div>
-      <div class="subtitle-secondary">{{ result.material }}</div>
-      <div class="price">{{ result.price }} €</div>
+      <div class="subtitle-primary" data-test="product-description">{{ result.description }}</div>
+      <div class="subtitle-secondary" data-test="product-material">{{ result.material }}</div>
+      <div class="price" data-test="product-price">{{ result.price }} €</div>
     </div>
   </div>
 </template>

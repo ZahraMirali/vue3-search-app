@@ -5,11 +5,11 @@
     </div>
     <div class="details">
       <router-link :to="`/${type}/${result.slug}`">
-        <div class="title">{{ result.name }}</div>
+        <div class="title" data-test="company-title">{{ result.name }}</div>
       </router-link>
 
-      <div class="subtitle-primary">{{ result.catchPhrase }}</div>
-      <div class="subtitle-secondary">{{ result.buzzPhrase }}</div>
+      <div class="subtitle-primary" data-test="company-catch-phrase">{{ result.catchPhrase }}</div>
+      <div class="subtitle-secondary" data-test="company-buzz-phrase">{{ result.buzzPhrase }}</div>
     </div>
   </div>
 </template>

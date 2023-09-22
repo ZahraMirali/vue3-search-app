@@ -31,7 +31,7 @@ describe('SearchBar', () => {
     useRouter.mockImplementationOnce(() => ({ push }))
 
     const wrapper = mount(SearchBar)
-    const input = wrapper.find('.search-input')
+    const input = wrapper.find('[data-test="search-input"]')
     input.setValue('search')
     await wrapper.find('form').trigger('submit.prevent')
 
