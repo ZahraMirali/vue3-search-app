@@ -28,7 +28,7 @@ function filterResults(data, searchTerm, categoryName) {
   )
 }
 
-export function searchCategory(selectedCategory, searchTerm) {
+export function fetchSearchResults(selectedCategory, searchTerm) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (selectedCategory === 'all') {
