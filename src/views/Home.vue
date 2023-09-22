@@ -59,7 +59,7 @@ p {
   color: var(--secondary);
 }
 
-@media screen and (min-width: 421px) {
+@media screen and (min-width: 420px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }

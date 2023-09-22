@@ -32,9 +32,3 @@ onMounted(() => {
 
 provide('categories', categories)
 </script>
-
-<style scoped>
-main {
-  padding: 100px 20px 20px;
-}
-</style>

@@ -1,3 +1,4 @@
+/*--Start: Variables-------------------*/
 :root {
   --primary: #00b797;
   --secondary-light: #dddddd;
@@ -19,8 +20,9 @@
   --elevation-raised: var(--elevation-lined), 0px 4px 4px var(--color-shadow);
   --voyager-elevation-text-theater: 0 0 2px var(--color-shadow);
 }
+/*--End: Variables---------------------*/
 
-/*--------------------------------------*/
+/*--Start: Main styles-----------------*/
 html {
   font-size: 16px;
   background: var(--color-background-canvas);
@@ -39,11 +41,13 @@ body {
   margin: 0;
 }
 
-#app {
-}
-
 header {
   z-index: 1000;
+}
+
+main {
+  padding-top: 100px;
+  padding-bottom: 20px;
 }
 
 * {
@@ -52,7 +56,9 @@ header {
   padding: 0;
   border: none;
 }
+/*--End: Main styles--------------------*/
 
+/*--Start: General styles---------------*/
 a,
 a:visited,
 a:hover {
@@ -60,12 +66,13 @@ a:hover {
   text-decoration-color: var(--color-text);
   text-decoration: none;
 }
+/*--End: General styles-----------------*/
 
 a:hover {
   text-decoration: underline;
 }
 
-/*--Start: Card Components styles-----------------*/
+/*--Start: Card Components styles (common styles)-----------------*/
 .card {
   display: flex;
   flex-direction: row;
@@ -103,12 +110,12 @@ a:hover {
   font-size: 0.8rem;
   color: var(--color-text-gray-dark);
 }
+/*--End: Card Components styles (common styles)--------------------*/
 
-/*--End: Card Components styles-----------------*/
-
+/*--Start: Responsive------------------------*/
 @media screen and (min-width: 768px) {
   main {
-    width: 726px;
+    width: 728px;
     margin: 0 auto;
   }
 }
@@ -116,5 +123,8 @@ a:hover {
 @media screen and (max-width: 768px) {
   main {
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
+/*--End: Responsive--------------------------*/
