@@ -6,4 +6,10 @@ const router = createRouter({
   routes: [{ path: '/:pathMatch(.*)*', component: { template: '' } }]
 })
 
+const categories = [
+  { label: 'People', value: 'people' },
+  { label: 'Companies', value: 'companies' }
+]
+
 config.global.plugins = [router]
+config.global.provide = { categories }
