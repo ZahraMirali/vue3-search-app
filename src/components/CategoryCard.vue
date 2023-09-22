@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="category-card">
     <span class="icon">
       <slot name="icon"></slot>
     </span>
@@ -13,7 +13,7 @@ defineProps(['name', 'description'])
 </script>
 
 <style scoped>
-.card {
+.category-card {
   background-color: #fafafa;
   box-shadow:
     0 3px 6px rgba(24, 24, 27, 0.02),
@@ -26,7 +26,7 @@ defineProps(['name', 'description'])
   transition: box-shadow 0.25s;
 }
 
-.card::before {
+.category-card::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -34,14 +34,14 @@ defineProps(['name', 'description'])
   background-color: transparent;
 }
 
-.card .icon {
+.category-card .icon {
   z-index: 2;
   position: relative;
   display: table;
   padding: 8px;
 }
 
-.card .icon::after {
+.category-card .icon::after {
   content: '';
   position: absolute;
   inset: 5px;
@@ -55,7 +55,7 @@ defineProps(['name', 'description'])
     border-color 0.25s;
 }
 
-.card .icon :slotted(svg) {
+.category-card .icon :slotted(svg) {
   position: relative;
   z-index: 1;
   display: block;
@@ -66,7 +66,7 @@ defineProps(['name', 'description'])
   transition: color 0.25s;
 }
 
-.card h4 {
+.category-card h4 {
   z-index: 2;
   position: relative;
   margin: 12px 0 4px 0;
@@ -77,7 +77,7 @@ defineProps(['name', 'description'])
   color: #18181b;
 }
 
-.card p {
+.category-card p {
   z-index: 2;
   position: relative;
   margin: 0;
@@ -86,19 +86,19 @@ defineProps(['name', 'description'])
   color: #52525b;
 }
 
-.card:hover {
+.category-card:hover {
   box-shadow:
     0 3px 6px rgba(24, 24, 27, 0.05),
     0 8px 15px rgba(24, 24, 27, 0.1),
     0 0 0 1px rgba(24, 24, 27, 0.15);
 }
 
-.card:hover .icon::after {
+.category-card:hover .icon::after {
   background-color: rgba(52, 211, 153, 0.1);
   border-color: rgba(52, 211, 153, 0.2);
 }
 
-.card:hover .icon :slotted(svg) {
+.category-card:hover .icon :slotted(svg) {
   color: #34d399;
 }
 </style>
