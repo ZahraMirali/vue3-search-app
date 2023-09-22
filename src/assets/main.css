@@ -5,14 +5,11 @@
   --color-background-canvas: #f4f2ee;
   --color-background: #ffffff;
   --color-text: rgb(0 0 0/0.9);
-  --color-text-gray: rgb(0 0 0/0.6);
+  --color-text-gray-dark: rgb(0 0 0/0.6);
   --color-shadow: rgb(140 140 140/0.2);
   --color-background-hover: rgba(0, 0, 0, 0.08);
 
-  --corner-radius-small: 0.4rem;
   --corner-radius-medium: 0.8rem;
-  --corner-radius-large: 1.6rem;
-  --corner-radius-xlarge: 2.4rem;
   --corner-radius-full: 50%;
 
   --border-width-small: 0.0625rem;
@@ -104,7 +101,7 @@ a:hover {
 
 .card .details .subtitle-secondary {
   font-size: 0.8rem;
-  color: var(--color-text-gray);
+  color: var(--color-text-gray-dark);
 }
 
 /*--End: Card Components styles-----------------*/

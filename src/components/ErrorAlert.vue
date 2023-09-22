@@ -19,6 +19,6 @@ defineProps({ message: String })
 }
 
 .error-message p {
-  color: var(--color-text-gray);
+  color: var(--color-text-gray-dark);
 }
 </style>
