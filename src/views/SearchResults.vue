@@ -90,6 +90,7 @@ const getCardComponent = (type) => {
 @media screen and (min-width: 768px) {
   .search-results {
     width: 726px;
+    margin: 0 auto;
   }
 }
 

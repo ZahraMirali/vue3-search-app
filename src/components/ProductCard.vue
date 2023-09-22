@@ -3,16 +3,15 @@
     <div class="details">
       <router-link :to="`/${type}/${result.slug}`">
         <div class="title">{{ result.name }}</div>
-        <div class="subtitle-primary">{{ result.description }}</div>
-        <div class="subtitle-secondary">{{ result.material }}</div>
-        <div class="price">{{ result.price }} €</div>
       </router-link>
+      <div class="subtitle-primary">{{ result.description }}</div>
+      <div class="subtitle-secondary">{{ result.material }}</div>
+      <div class="price">{{ result.price }} €</div>
     </div>
   </div>
 </template>
 
 <script setup>
-
 defineProps({
   result: Object,
   type: String

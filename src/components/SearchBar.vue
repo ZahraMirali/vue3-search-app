@@ -1,16 +1,18 @@
 <template>
   <div class="search-bar">
-    <div class="search-box-with-category">
-      <CustomSelect :options="categories" :value="selectedCategory" @input="onInput" />
-      <span class="separator">|</span>
-      <form @submit.prevent="submitSearchForm">
-        <div class="search-box">
-          <input v-model="searchTerm" class="search-input" placeholder="Search..." type="text" />
-          <button aria-label="Search" class="search-button" title="Search" type="submit">
-            <IconSearch />
-          </button>
-        </div>
-      </form>
+    <div class="search-bar-container">
+      <div class="search-box-with-category">
+        <CustomSelect :options="categories" :value="selectedCategory" @input="onInput" />
+        <span class="separator">|</span>
+        <form @submit.prevent="submitSearchForm">
+          <div class="search-box">
+            <input v-model="searchTerm" class="search-input" placeholder="Search..." type="text" />
+            <button aria-label="Search" class="search-button" title="Search" type="submit">
+              <IconSearch />
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </template>
@@ -28,9 +30,12 @@ const categories = inject('categories')
 const selectedCategory = ref(route.params.type)
 const searchTerm = ref(route.query.keywords || '')
 
-watch(() => route.params.type, () => {
-  selectedCategory.value = route.params.type
-})
+watch(
+  () => route.params.type,
+  () => {
+    selectedCategory.value = route.params.type
+  }
+)
 
 function onInput(event) {
   selectedCategory.value = event
@@ -58,8 +63,13 @@ function submitSearchForm() {
   z-index: 3;
 }
 
+.search-bar-container {
+  margin: 0 auto;
+}
+
 .search-box-with-category {
-  margin: 0 auto 0.3125rem;
+  width: 100%;
+  margin: 0 auto 0 0;
   display: flex;
   align-items: center;
   background-color: #edf3f8;
@@ -127,23 +137,14 @@ function submitSearchForm() {
 }
 
 @media screen and (min-width: 768px) {
-  .search-box-with-category {
+  .search-bar-container {
     width: 726px;
-    margin: 0 auto;
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 767px) {
-  .search-box-with-category {
-    width: 80%;
-    margin: 0 auto 0 0;
-  }
-}
-
-@media screen and (max-width: 599px) {
-  .search-box-with-category {
+@media screen and (max-width: 767px) {
+  .search-bar-container {
     width: 100%;
-    margin: 0 auto 0;
   }
 }
 </style>

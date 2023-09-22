@@ -7,7 +7,7 @@
   --color-text: rgb(0 0 0/0.9);
   --color-text-gray: rgb(0 0 0/0.6);
   --color-shadow: rgb(140 140 140/0.2);
-  --color-background-hover: rgba(0,0,0,0.08);
+  --color-background-hover: rgba(0, 0, 0, 0.08);
 
   --corner-radius-small: 0.4rem;
   --corner-radius-medium: 0.8rem;
@@ -43,12 +43,12 @@ body {
 }
 
 #app {
-
 }
 
-header{
+header {
   z-index: 1000;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -67,7 +67,6 @@ a:hover {
 a:hover {
   text-decoration: underline;
 }
-
 
 /*--Start: Card Components styles-----------------*/
 .card {
@@ -93,7 +92,7 @@ a:hover {
   font-weight: bold;
 }
 
-.card .details:hover .title {
+.card .details .title:hover {
   text-decoration: underline;
 }
 
@@ -107,5 +106,5 @@ a:hover {
   font-size: 0.8rem;
   color: var(--color-text-gray);
 }
-/*--End: Card Components styles-----------------*/
 
+/*--End: Card Components styles-----------------*/

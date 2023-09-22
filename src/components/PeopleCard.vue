@@ -6,9 +6,9 @@
     <div class="details">
       <router-link :to="`/${type}/${result.slug}`">
         <div class="title">{{ result.firstName }} {{ result.lastName }}</div>
-        <div class="subtitle-primary">{{ result.jobTitle }}</div>
-        <div class="subtitle-secondary">{{ result.bio }}</div>
       </router-link>
+      <div class="subtitle-primary">{{ result.jobTitle }}</div>
+      <div class="subtitle-secondary">{{ result.bio }}</div>
     </div>
   </div>
 </template>
