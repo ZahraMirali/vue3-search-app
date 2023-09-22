@@ -101,8 +101,7 @@ const getCardComponent = (type) => {
 }
 
 .search-results {
-  margin: 0 auto 0.3125rem;
-
+  margin: 0 auto 0.5rem;
   background-color: var(--color-background);
   box-shadow: var(--elevation-lined);
   border-radius: var(--corner-radius-medium);
