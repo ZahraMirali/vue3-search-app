@@ -113,6 +113,8 @@ The project includes a mocked API for testing and development purposes. This API
 
 The project also employs Vue Router for route-based navigation. Users can navigate through different categories and search results by changing the URL parameters.
 
+On the search results page, clicking on each item in the search results will navigate you to a details page (please note that the details page is not implemented yet).
+
 ## Home Page Usage
 
 On the home page, you'll see a list of all categories, each accompanied by an icon and a brief description. If you click on any of these category cards, you'll be directed to the respective search category's results page. This intuitive navigation system simplifies the process of exploring and searching within different categories.
