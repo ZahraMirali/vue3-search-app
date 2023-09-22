@@ -113,14 +113,6 @@ The project includes a mocked API for testing and development purposes. This API
 
 The project also employs Vue Router for route-based navigation. Users can navigate through different categories and search results by changing the URL parameters.
 
-### Development Tools
-
-- **Vue 3:** The project is built using Vue 3, a progressive JavaScript framework for building user interfaces.
-
-- **Vue Router:** Vue Router is used for handling client-side routing and navigation.
-
-- **JSON Data:** Sample data is provided in JSON format to simulate real-world data sources.
-
 ## Home Page Usage
 
 On the home page, you'll see a list of all categories, each accompanied by an icon and a brief description. If you click on any of these category cards, you'll be directed to the respective search category's results page. This intuitive navigation system simplifies the process of exploring and searching within different categories.
