@@ -36,7 +36,7 @@ import ProductCard from '../components/ProductCard.vue'
 import LocationCard from '../components/LocationCard.vue'
 import LoadingSpinner from '../components/LoadingSpinner.vue'
 import ErrorAlert from '../components/ErrorAlert.vue'
-import { searchCategory } from '@/services/search'
+import { fetchSearchResults } from '../services/search'
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -56,7 +56,7 @@ const generateSearchRoute = computed(() => {
 
 const performSearch = (selectedCategory, keywords = '') => {
   loading.value = true
-  searchCategory(selectedCategory, keywords)
+  fetchSearchResults(selectedCategory, keywords)
     .then((results) => {
       error.value = null
       searchResults.value = results

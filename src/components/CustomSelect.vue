@@ -60,7 +60,6 @@ function selectOption(selectedValue) {
 .custom-select .selected {
   border-radius: 0.375rem;
   padding: 0 1rem;
-  /* Converted from 0.625rem to rem */
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -86,7 +85,6 @@ function selectOption(selectedValue) {
 
 .custom-select .items div {
   padding-left: 1rem;
-  /* Converted from 0.625rem to rem */
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -103,7 +101,6 @@ function selectOption(selectedValue) {
   display: inline;
   align-self: center;
   margin-top: 0.625rem;
-  /* Converted from 10px to rem */
   margin-left: 0.3125rem;
-  /* Converted from 5px to rem */
-}</style>
+}
+</style>
