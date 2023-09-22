@@ -36,7 +36,7 @@ export function searchCategory(selectedCategory, searchTerm) {
 
         categories.forEach(({ value, label }) => {
           const data = filterResults(categoriesData[value], searchTerm, value)
-          allResults[label] = { data: data.slice(0, 3), totalCount: data.length }
+          allResults[value] = { data: data.slice(0, 3), totalCount: data.length, label }
         })
 
         resolve(allResults)
@@ -49,7 +49,9 @@ export function searchCategory(selectedCategory, searchTerm) {
         }
 
         const data = filterResults(categoriesData[selectedCategory], searchTerm, selectedCategory)
-        const results = { [category.label]: { data, totalCount: data.length } }
+        const results = {
+          [category.value]: { data, totalCount: data.length, label: category.label }
+        }
         resolve(results)
       }
     }, 200)

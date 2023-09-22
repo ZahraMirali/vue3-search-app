@@ -4,18 +4,15 @@
   <div v-else>
     <div v-for="(result, type) in searchResults" :key="type" class="search-results">
       <div class="search-result-box">
-        <h2 class="result-type">{{ type }}</h2>
+        <h2 class="result-type">{{ result.label }}</h2>
         <ul class="result-list">
           <li v-for="item in result.data" :key="item.slug" class="result-item">
             <component :is="getCardComponent(type)" :result="item" :type="type" />
           </li>
         </ul>
       </div>
-      <router-link
-        v-if="result.data.length < result.totalCount"
-        :to="`/${type}${generateSearchRoute}`"
-        class="see-all-link"
-      >
+      <router-link v-if="result.data.length < result.totalCount" :to="`/${type}${generateSearchRoute}`"
+        class="see-all-link">
         <div class="more-results">See all {{ type }} results</div>
       </router-link>
     </div>
