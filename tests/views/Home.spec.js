@@ -1,10 +1,10 @@
 import { mount } from '@vue/test-utils'
-import Home from '../../src/views/Home.vue'
+import HomePage from '../../src/views/HomePage.vue'
 import categories from '../../src/data/categories.json'
 
-describe('Home', () => {
+describe('HomePage', () => {
   it('renders the categories correctly', () => {
-    const wrapper = mount(Home)
+    const wrapper = mount(HomePage)
     const categoryCards = wrapper.findAllComponents({ name: 'CategoryCard' })
     expect(categoryCards.length).toBe(categories.length)
 

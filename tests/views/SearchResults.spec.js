@@ -1,15 +1,15 @@
 import { mount } from '@vue/test-utils'
-import SearchResults from '../../src/views/SearchResults.vue'
+import SearchResultsPage from '../../src/views/SearchResultsPage.vue'
 import flushPromises from 'flush-promises'
 import { fetchSearchResults } from '../../src/services/search'
 
 jest.mock('../../src/services/search')
 
-describe('SearchResults', () => {
+describe('SearchResultsPage', () => {
   it('displays loading spinner when loading is true', async () => {
     fetchSearchResults.mockReturnValue(new Promise(() => {}))
 
-    const wrapper = mount(SearchResults)
+    const wrapper = mount(SearchResultsPage)
     await flushPromises()
 
     expect(wrapper.findComponent({ name: 'LoadingSpinner' }).exists()).toBe(true)
@@ -20,7 +20,7 @@ describe('SearchResults', () => {
   it('displays error alert when error is not null', async () => {
     fetchSearchResults.mockRejectedValue('Error')
 
-    const wrapper = mount(SearchResults)
+    const wrapper = mount(SearchResultsPage)
     await flushPromises()
 
     expect(wrapper.findComponent({ name: 'LoadingSpinner' }).exists()).toBe(false)
@@ -31,7 +31,7 @@ describe('SearchResults', () => {
   it('displays search results when loading and error are false', async () => {
     fetchSearchResults.mockResolvedValue({ people: { data: [{}] }, companies: { data: [{}] } })
 
-    const wrapper = mount(SearchResults)
+    const wrapper = mount(SearchResultsPage)
     await flushPromises()
 
     expect(wrapper.findComponent({ name: 'LoadingSpinner' }).exists()).toBe(false)

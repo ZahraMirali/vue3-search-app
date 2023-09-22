@@ -1,24 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import SearchResults from '../views/SearchResults.vue'
-import Details from '../views/Details.vue'
+import HomePage from '../views/HomePage.vue'
+import SearchResultsPage from '../views/SearchResultsPage.vue'
+import DetailsPage from '../views/DetailsPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      component: Home,
+      component: HomePage,
       props: true
     },
     {
       path: '/:type',
-      component: SearchResults,
+      component: SearchResultsPage,
       props: (route) => ({ keywords: route.query.keywords })
     },
     {
       path: '/:type/:slug',
-      component: Details,
+      component: DetailsPage,
       props: true
     }
   ],
