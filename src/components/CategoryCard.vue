@@ -86,7 +86,7 @@ defineProps(['name', 'description'])
   color: var(--color-pramary-dark);
 }
 
-.grid a:hover{
+.grid a:hover {
   text-decoration: none !important;
 }
 </style>
