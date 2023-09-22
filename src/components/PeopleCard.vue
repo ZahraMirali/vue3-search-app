@@ -23,7 +23,7 @@ defineProps({
 })
 </script>
 
-<style>
+<style scoped>
 .card {
   display: flex;
   flex-direction: row;
