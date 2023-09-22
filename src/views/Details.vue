@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Details - {{ this.type }} - {{ this.slug }}</h1>
+    <h1>Details - {{ type }} - {{ slug }}</h1>
   </div>
 </template>
 

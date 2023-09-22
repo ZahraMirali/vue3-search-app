@@ -41,9 +41,17 @@ const getIconComponent = (type) => {
 <style scoped>
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 240px);
-  grid-gap: 32px;
+  grid-template-columns: repeat(2, 15rem);
+  grid-gap: 2rem;
   position: relative;
   z-index: 1;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
 }
 </style>
